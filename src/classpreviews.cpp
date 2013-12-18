@@ -19,11 +19,12 @@
 
 #include "classpreviews.h"
 
-KDialogPreview::KDialogPreview(QWidget * parent)
+KDialogPreview::KDialogPreview(QWidget *parent)
 {
-   if (parent)
-      setParent(parent);
-   else
-      qDebug("Error while reparenting!");
+    if (parent) {
+        setParent(parent);
+    } else {
+        qDebug("Error while reparenting!");
+    }
 }
 

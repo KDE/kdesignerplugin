@@ -1,5 +1,5 @@
 /* This file is part of the KDE libraries
-    Copyright (C) 2001 Daniel Molkentin <molkentin@kde.org> 
+    Copyright (C) 2001 Daniel Molkentin <molkentin@kde.org>
 
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU Library General Public
@@ -35,7 +35,7 @@
 class KDialogPreview : public QDialog
 {
 public:
-	KDialogPreview(QWidget * parent = 0);
+    KDialogPreview(QWidget *parent = 0);
 };
 
 #endif // CLASSPREVIEWS_H
