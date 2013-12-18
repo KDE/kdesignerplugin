@@ -20,12 +20,11 @@ install(TARGETS kgendesignerplugin  EXPORT KF5DesignerPluginTargets ${INSTALL_TA
 
 ########### next target ###############
 
-find_package(Qt5Designer)
+if (${Qt5Designer_FOUND})
+   include_directories(${Qt5Designer_INCLUDE_DIRS})
+endif ()
 
-if(Qt5Designer_FOUND)
-
-  include_directories(${Qt5Designer_INCLUDE_DIRS})
-
+if (BUILD_KF5_DESIGNER_PLUGIN)
   add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/kdewidgets.cpp
     COMMAND kgendesignerplugin -o ${CMAKE_CURRENT_BINARY_DIR}/kdewidgets.cpp ${CMAKE_CURRENT_SOURCE_DIR}/kde.widgets
     MAIN_DEPENDENCY kde.widgets)
@@ -54,8 +53,13 @@ if(Qt5Designer_FOUND)
   endif()
 
   install(TARGETS kf5widgets DESTINATION ${QT_PLUGIN_INSTALL_DIR}/designer)
+endif ()
 
-  if(Qt5WebKitWidgets_FOUND)
+
+########### next target ###############
+
+
+if (BUILD_KDEWEBKIT_DESIGNER_PLUGIN)
 
      add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/kdewebkitwidgets.cpp
        COMMAND kgendesignerplugin -o ${CMAKE_CURRENT_BINARY_DIR}/kdewebkitwidgets.cpp ${CMAKE_CURRENT_SOURCE_DIR}/kdewebkit.widgets
@@ -74,7 +78,7 @@ if(Qt5Designer_FOUND)
 
      add_library(kdewebkitwidgets MODULE ${kdewebkitwidgets_PART_SRCS})
 
-     target_link_libraries(kdewebkitwidgets KDEWebKit Qt5::WebKitWidgets)
+     target_link_libraries(kdewebkitwidgets KF5::WebKit Qt5::WebKit)
      if(NOT WIN32)
        set_target_properties(kdewebkitwidgets PROPERTIES
                                         INSTALL_RPATH_USE_LINK_PATH TRUE
@@ -86,13 +90,4 @@ if(Qt5Designer_FOUND)
 
      install(TARGETS kdewebkitwidgets DESTINATION ${QT_PLUGIN_INSTALL_DIR}/designer )
 
-  endif() # webkit
-
-endif()
-
-########### install files ###############
-
-
-
-
-
+endif ()
