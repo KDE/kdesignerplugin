@@ -132,11 +132,6 @@ void buildFile(QTextStream &ts, const QString &group, const QString &fileName, c
 {
     KConfig input(fileName, KConfig::NoGlobals);
     KConfigGroup cg(&input, "Global");
-    QHash<QString, QString> MainMap;
-    MainMap.insert("PluginName", cg.readEntry("PluginName", pluginName));
-    MainMap.insert("PluginNameLower", cg.readEntry("PluginName", pluginName).toLower());
-    MainMap.insert("Init", cg.readEntry("Init", ""));
-    MainMap.insert("Destroy", cg.readEntry("Destroy", ""));
     ts << classHeader << endl;
 
     QStringList includes = cg.readEntry("Includes", QStringList());
@@ -195,8 +190,6 @@ QString buildWidgetClass(const QString &name, KConfig &_input, const QString &gr
     QHash<QString, QString> defMap;
 
     defMap.insert("Group", input.readEntry("Group", group).replace('\"', "\\\""));
-    defMap.insert("IconSet", input.readEntry("IconSet", QString(name.toLower() + ".png")).replace(':', '_'));
-    defMap.insert("Pixmap", name.toLower().replace(':', '_') + "_xpm");
     defMap.insert("IncludeFile", input.readEntry("IncludeFile", QString(name.toLower() + ".h")).remove(':'));
     defMap.insert("ToolTip", input.readEntry("ToolTip", QString(name + " Widget")).replace('\"', "\\\""));
     defMap.insert("WhatsThis", input.readEntry("WhatsThis", QString(name + " Widget")).replace('\"', "\\\""));
