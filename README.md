@@ -41,8 +41,8 @@ plugin.  It must include a [Global] section providing a PluginName entry
     PluginName=FooWidgets
 
 This section can also list additional headers that should be included
-for the plugin code to work, for example preview classes (see below),
-with the Includes entry, like
+for the plugin code to work, for example preview classes (see ImplClass
+documentation below), with the Includes entry:
 
     [Global]
     PluginName=FooWidgets
@@ -54,23 +54,22 @@ inherits QWidget), whose header file is fooview.h, you could have the
 section
 
     [FooView]
-    IncludeFile=fooview.h
+    IncludeFile=fooviewwidget.h
     ImplClass=FooViewPreview
     Group=Views (Foo)
 
-IncludeFile specifies the header file for the widget (not
-necessary if it is included in one of the global Includes files).
-
 The implementation of every method of QDesignerCustomWidgetInterface can
-be set using options similar to the Group entry in the above example,
-which causes the group() method to return "Views (Foo)", for example.
+be controlled using options similar to the Group entry in the above
+example, which causes the group() method to return "Views (Foo)".
 
 kgendesignerplugin attempts to pick sensible defaults for these values:
 
+- IncludeFile: would default to "fooview.h" if it were omitted from the
+  example
 - Group: defaults to the value of the -g option passed to
   kgendesignerplugin, which itself defaults to "Custom"
-- ToolTip: defaults to "FooView Widget" in the above example
-- WhatsThis: defaults to "FooView Widget" in the above example
+- ToolTip: defaults to "FooView Widget" in the example
+- WhatsThis: defaults to "FooView Widget" in the example
 - IsContainer: defaults to false
 - CreateWidget: defaults to `return new ImplClass ConstructorArgs` where
   ImplClass and ConstructorArgs are entries (see below)
@@ -88,7 +87,8 @@ need to use a different class for previewing the widget in Qt Designer
 (FooViewPreview in the above example), rather than setting CreateWidget
 you can use some combination of ImplClass and ConstructorArgs:
 
-- ImplClass: defaults to FooView in the above example
+- ImplClass: would default to FooView if it were omitted from the
+  example
 - ConstructorArgs: defaults to (parent) - note that the parentheses
   are required
 
