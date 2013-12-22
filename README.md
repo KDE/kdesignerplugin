@@ -44,11 +44,14 @@ plugin.  It must include a [Global] section providing a PluginName entry
 
 This section can also list additional headers that should be included
 for the plugin code to work, for example preview classes (see ImplClass
-documentation below), with the Includes entry:
+documentation below), with the Includes entry.  It can also specify a
+default value for the Group option (see below) with the DefaultGroup
+entry.
 
     [Global]
     PluginName=FooWidgets
-    Includes=classpreviews.h
+    Includes=classpreviews.h,otherinclude.h
+    DefaultGroup=Foo Widgets
 
 In addition, it should have a section for each widget you wish to
 include in the plugin.  For example, if you have a class FooView (that
@@ -68,8 +71,8 @@ kgendesignerplugin attempts to pick sensible defaults for these values:
 
 - IncludeFile: would default to "fooview.h" if it were omitted from the
   example
-- Group: defaults to the value of the -g option passed to
-  kgendesignerplugin, which itself defaults to "Custom"
+- Group: defaults to the value of DefaultGroup in the [Global] section,
+  which itself defaults to "Custom"
 - ToolTip: defaults to "FooView Widget" in the example
 - WhatsThis: defaults to "FooView Widget" in the example
 - IsContainer: defaults to false

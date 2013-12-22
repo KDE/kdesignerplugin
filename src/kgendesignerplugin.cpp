@@ -72,7 +72,7 @@ static const char classDef[] =  "class %PluginName : public QObject, public QDes
                                 "};\n\n";
 
 static QString denamespace(const QString &str);
-static QString buildCollClass(KConfig &input, const QStringList &classes);
+static QString buildCollClass(KConfig &input, const QStringList &classes, const QString &group);
 static QString buildWidgetClass(const QString &name, KConfig &input, const QString &group);
 static QString buildWidgetInclude(const QString &name, KConfig &input);
 static void buildFile(QTextStream &stream, const QString &group, const QString &fileName, const QString &pluginName);
@@ -134,6 +134,7 @@ void buildFile(QTextStream &ts, const QString &group, const QString &fileName, c
     KConfigGroup cg(&input, "Global");
     ts << classHeader << endl;
 
+    QString defaultGroup = cg.readEntry("DefaultGroup", group);
     QStringList includes = cg.readEntry("Includes", QStringList());
     QStringList classes = input.groupList();
     classes.removeAll("Global");
@@ -150,10 +151,10 @@ void buildFile(QTextStream &ts, const QString &group, const QString &fileName, c
 
     // Autogenerate widget defs here
     foreach (const QString &myClass, classes) {
-        ts << buildWidgetClass(myClass, input, group) << endl;
+        ts << buildWidgetClass(myClass, input, defaultGroup) << endl;
     }
 
-    ts << buildCollClass(input, classes);
+    ts << buildCollClass(input, classes, pluginName);
 
 }
 
@@ -164,11 +165,11 @@ QString denamespace(const QString &str)
     return denamespaced;
 }
 
-QString buildCollClass(KConfig &_input, const QStringList &classes)
+QString buildCollClass(KConfig &_input, const QStringList &classes, const QString &pluginName)
 {
     KConfigGroup input(&_input, "Global");
     QHash<QString, QString> defMap;
-    const QString collName = input.readEntry("PluginName");
+    const QString collName = input.readEntry("PluginName", pluginName);
     Q_ASSERT(!collName.isEmpty());
     defMap.insert("CollName", collName);
     QString genCode;
