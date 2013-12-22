@@ -10,7 +10,9 @@ from ini-style description files.
 ## kgendesignerplugin
 
 To use kgendesignerplugin in your own project, add
-  find_package(KF5DesignerPlugin)
+
+    find_package(KF5DesignerPlugin)
+
 to your CMakeLists.txt file, and use the
 kf5designerplugin\_add\_widget\_files macro.  For example, you might do
 
