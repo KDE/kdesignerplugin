@@ -34,9 +34,6 @@ if (BUILD_KF5_DESIGNER_PLUGIN)
      ${CMAKE_CURRENT_BINARY_DIR}/kdewidgets.moc
   )
 
-  qt5_generate_moc(${CMAKE_CURRENT_BINARY_DIR}/kdewidgets.cpp ${CMAKE_CURRENT_BINARY_DIR}/kdewidgets.moc)
-
-
   qt5_add_resources(kf5widgets_PART_SRCS kdewidgets.qrc)
 
   add_library(kf5widgets MODULE ${kf5widgets_PART_SRCS})
@@ -68,9 +65,6 @@ if (BUILD_KDEWEBKIT_DESIGNER_PLUGIN)
         ${CMAKE_CURRENT_BINARY_DIR}/kdewebkitwidgets.cpp
         ${CMAKE_CURRENT_BINARY_DIR}/kdewebkitwidgets.moc
      )
-
-     qt5_generate_moc(${CMAKE_CURRENT_BINARY_DIR}/kdewebkitwidgets.cpp ${CMAKE_CURRENT_BINARY_DIR}/kdewebkitwidgets.moc)
-
 
      qt5_add_resources(kdewebkitwidgets_PART_SRCS kdewebkitwidgets.qrc)
 
