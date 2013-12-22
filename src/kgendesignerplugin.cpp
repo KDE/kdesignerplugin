@@ -90,10 +90,18 @@ int main(int argc, char **argv)
     parser.addHelpOption();
     //options.add("+file", QCoreApplication::translate("kgendesignerplugin about data",  "Input file" ) );
     parser.addOption(QCommandLineOption(QStringList() << "o", QCoreApplication::translate("main", "Output file"), "file"));
-    parser.addOption(QCommandLineOption(QStringList() << "n", QCoreApplication::translate("main", "Name of the plugin class to generate"), "plugin name", "WidgetsPlugin"));
-    parser.addOption(QCommandLineOption(QStringList() << "g", QCoreApplication::translate("main", "Default widget group name to display in designer"), "group", "Custom"));
+    parser.addOption(QCommandLineOption(QStringList() << "n", QCoreApplication::translate("main", "Name of the plugin class to generate (deprecated, use PluginName in the input file)."), "plugin name", "WidgetsPlugin"));
+    parser.addOption(QCommandLineOption(QStringList() << "g", QCoreApplication::translate("main", "Default widget group name to display in designer (deprecated, use DefaultGroup in the input file)."), "group", "Custom"));
 
-    KAboutData about("kgendesignerplugin", 0, QCoreApplication::translate("kgendesignerplugin about data",  "kgendesignerplugin"), version, description, KAboutData::License_GPL, QCoreApplication::translate("kgendesignerplugin about data", "(C) 2004-2005 Ian Reinhart Geiser"), QString(), 0, "geiseri@kde.org");
+    KAboutData about("kgendesignerplugin", 0,
+            QCoreApplication::translate("kgendesignerplugin about data", "kgendesignerplugin"),
+            version,
+            description,
+            KAboutData::License_GPL,
+            QCoreApplication::translate("kgendesignerplugin about data", "(C) 2004-2005 Ian Reinhart Geiser"),
+            QString(),
+            0,
+            "geiseri@kde.org");
     about.addAuthor(QCoreApplication::translate("kgendesignerplugin about data", "Ian Reinhart Geiser"), QString(), "geiseri@kde.org");
     about.addAuthor(QCoreApplication::translate("kgendesignerplugin about data", "Daniel Molkentin"), QString(), "molkentin@kde.org");
     about.setupCommandLine(&parser);

@@ -86,7 +86,7 @@ Builds &Qt; widget plugins from an ini style description file.
 <option>-n &lt;plugin name&gt;</option>
 </term>
 <listitem>
-<para>Name of the plugin class to generate [WidgetsPlugin]</para>
+<para>Name of the plugin class to generate (deprecated, use PluginName in the input file) [WidgetsPlugin]</para>
 </listitem>
 </varlistentry>
 <varlistentry>
@@ -94,7 +94,7 @@ Builds &Qt; widget plugins from an ini style description file.
 <option>-g &lt;group&gt;</option>
 </term>
 <listitem>
-<para>Default widget group name to display in designer [Custom]</para>
+<para>Default widget group name to display in designer (deprecated, use DefaultGroup in the input file) [Custom]</para>
 </listitem>
 </varlistentry>
 </variablelist>
