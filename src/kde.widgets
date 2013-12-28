@@ -1,7 +1,5 @@
 [Global]
 PluginName=KF5Widgets
-Includes=classpreviews.h
-Init=
 
 [KActionSelector]
 IncludeFile=kactionselector.h

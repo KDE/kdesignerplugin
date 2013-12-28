@@ -30,7 +30,6 @@ if (BUILD_KF5_DESIGNER_PLUGIN)
     MAIN_DEPENDENCY kde.widgets)
 
   set(kf5widgets_PART_SRCS
-     classpreviews.cpp
      ${CMAKE_CURRENT_BINARY_DIR}/kdewidgets.cpp
      ${CMAKE_CURRENT_BINARY_DIR}/kdewidgets.moc
   )
@@ -66,7 +65,6 @@ if (BUILD_KDEWEBKIT_DESIGNER_PLUGIN)
        MAIN_DEPENDENCY kdewebkit.widgets)
 
      set(kdewebkitwidgets_PART_SRCS
-        classpreviews.cpp
         ${CMAKE_CURRENT_BINARY_DIR}/kdewebkitwidgets.cpp
         ${CMAKE_CURRENT_BINARY_DIR}/kdewebkitwidgets.moc
      )
