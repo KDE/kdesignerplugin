@@ -31,6 +31,9 @@ macro (KF5DESIGNERPLUGIN_ADD_WIDGET_FILES _sources)
         ARGS -o ${_source} ${_input}
         MAIN_DEPENDENCY ${_input} DEPENDS ${_KF5DESIGNERPLUGIN_GENERATOR_EXECUTABLE_DEP})
 
+      # create moc file
+      qt5_generate_moc(${_source} ${_moc} )
+
       list(APPEND ${_sources} ${_source} ${_moc})
 
    endforeach (_current_FILE)
