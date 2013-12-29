@@ -88,9 +88,9 @@ int main(int argc, char **argv)
     QCommandLineParser parser;
     parser.addVersionOption();
     parser.addHelpOption();
-    parser.addPositionalArgument("file", QCoreApplication::translate("main",  "Input file"));
-    parser.addOption(QCommandLineOption(QStringList() << "o", QCoreApplication::translate("main", "Output file"), "file"));
-    parser.addOption(QCommandLineOption(QStringList() << "n", QCoreApplication::translate("main", "Name of the plugin class to generate (deprecated, use PluginName in the input file)."), "plugin name", "WidgetsPlugin"));
+    parser.addPositionalArgument("file", QCoreApplication::translate("main",  "Input file."));
+    parser.addOption(QCommandLineOption(QStringList() << "o", QCoreApplication::translate("main", "Output file."), "file"));
+    parser.addOption(QCommandLineOption(QStringList() << "n", QCoreApplication::translate("main", "Name of the plugin class to generate (deprecated, use PluginName in the input file)."), "name", "WidgetsPlugin"));
     parser.addOption(QCommandLineOption(QStringList() << "g", QCoreApplication::translate("main", "Default widget group name to display in designer (deprecated, use DefaultGroup in the input file)."), "group", "Custom"));
 
     KAboutData about("kgendesignerplugin", 0,
