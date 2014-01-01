@@ -226,7 +226,7 @@ ConstructorArgs=(parent, 0)
 
 [KTreeWidgetSearchLineWidget]
 ToolTip=QTreeWidget Search Line Widget (KDE)
-IncludeFile=ktreewidgetsearchline.h
+IncludeFile=ktreewidgetsearchlinewidget.h
 Group=Input (KDE)
 ConstructorArgs=(parent, 0)
 
