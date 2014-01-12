@@ -13,11 +13,6 @@ include(FeatureSummary)
 
 set(REQUIRED_QT_VERSION 5.2.0)
 find_package(Qt5Core ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
-find_package(Qt5WebKitWidgets ${REQUIRED_QT_VERSION} NO_MODULE)
-set_package_properties(Qt5WebKitWidgets PROPERTIES
-   PURPOSE "Required to build the Qt Designer plugin for the KDEWebKit widgets"
-   TYPE OPTIONAL
-)
 find_package(Qt5Designer ${REQUIRED_QT_VERSION} NO_MODULE)
 set_package_properties(Qt5Designer PROPERTIES
    PURPOSE "Required to build the Qt Designer plugins"

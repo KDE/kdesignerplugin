@@ -76,7 +76,7 @@ if (BUILD_KDEWEBKIT_DESIGNER_PLUGIN)
 
      add_library(kdewebkitwidgets MODULE ${kdewebkitwidgets_PART_SRCS})
 
-     target_link_libraries(kdewebkitwidgets KF5::WebKit Qt5::WebKit)
+     target_link_libraries(kdewebkitwidgets KF5::WebKit)
      if(NOT WIN32)
        set_target_properties(kdewebkitwidgets PROPERTIES
                                         INSTALL_RPATH_USE_LINK_PATH TRUE
