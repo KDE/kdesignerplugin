@@ -1,77 +1,92 @@
 [Global]
 PluginName=KF5Widgets
 
+# KWidgetsAddons
 [KActionSelector]
 IncludeFile=kactionselector.h
 ToolTip=A widget for selecting and arranging actions/objects
 Group=Views (KDE)
 
+# KWidgetsAddons
 [KAnimatedButton]
 IncludeFile=kanimatedbutton.h
 ToolTip=An extended version of QToolButton which can display an animated icon.
 Group=Display (KDE)
 ConstructorArgs=(parent)
 
+# KWidgetsAddons
 [KCapacityBar]
 IncludeFile=kcapacitybar.h
 ToolTip=Capacity Bar (KDE)
 ConstructorArgs=(KCapacityBar::DrawTextOutline, parent)
 Group=Display (KDE)
 
+# KItemViews
 [KCategorizedView]
 ToolTip=Categorized Item View (KDE)
 WhatsThis=Item view for listing items in a categorized fashion optionally.
 Group=Views (KDE)
 
+# KWidgetsAddons
 [KCharSelect]
 ToolTip=Character Selection Widget (KDE)
 WhatsThis=A widget that allows selection a character out ot a table
 Group=Graphics (KDE)
 ConstructorArgs=(parent, 0)
 
+# KWidgetsAddons
 [KColorButton]
 ToolTip=Color Chooser Button (KDE)
 WhatsThis=A button that allows selecting a color
 Group=Graphics (KDE)
 
+# KWidgetsAddons
 [KColorCombo]
 ToolTip=Color Combo Box (KDE)
 Group=Graphics (KDE)
 
+# KCompletion
 [KComboBox]
 ToolTip=Combo Box (KDE)
 Group=Input (KDE)
 
+# KWidgetsAddons
 [KDatePicker]
 ToolTip=A date selection widget (KDE)
 WhatsThis=Provides a widget for calendar date input
 Group=Date/Time (KDE)
 
+# KWidgetsAddons
 [KDateComboBox]
 ToolTip=This widget can be used to display or edit the date. (KDE)
 IncludeFile=kdatecombobox.h
 Group=Date/Time (KDE)
 
+# KWidgetsAddons
 [KTimeComboBox]
 ToolTip=This widget can be used to display or edit the time. (KDE)
 IncludeFile=ktimecombobox.h
 Group=Date/Time (KDE)
 
+# KWidgetsAddons
 [KDateTimeEdit]
 ToolTip=This widget can be used to display or edit the date and time. (KDE)
 IncludeFile=kdatetimeedit.h
 Group=Date/Time (KDE)
 
+# KWidgetsAddons
 [KEditListWidget]
 ToolTip=Fullfeatured edit box with buttons (KDE)
 Group=Views (KDE)
 
+# KItemViews
 [KFilterProxySearchLine]
 IncludeFile=kfilterproxysearchline.h
 ToolTip=Filter proxy search line
 WhatsThis=A search line widget which works on a QSortFilterProxyModel
 Group=Input (KDE)
 
+# KWidgetsAddons
 [KFontChooser]
 IncludeFile=kfontchooser.h
 IconSet=kfontcombo.png
@@ -79,173 +94,205 @@ ToolTip=Font Chooser (KDE)
 WhatsThis=A font type, size and style selection widget complete with preview
 Group=Input (KDE)
 
+# KWidgetsAddons
 [KFontRequester]
 IncludeFile=kfontrequester.h
 ToolTip=Font Requester (KDE)
 WhatsThis=A compact font selection and preview widget
 Group=Input (KDE)
 
+# KWidgetsAddons
 [KGradientSelector]
 IncludeFile=kselector.h
 ToolTip=Gradient Color Selector (KDE)
 Group=Input (KDE)
 
+# KCompletion
 [KHistoryComboBox]
 IncludeFile=khistorycombobox.h
 ToolTip=A combobox for offering a history and completion (KDE)
 WhatsThis=A combobox which implements a history like a unix shell
 Group=Input (KDE)
 
+# KIconThemes
 [KIconButton]
 IncludeFile=kiconbutton.h
 ToolTip=Button for selecting an icon (KDE)
 Group=Buttons (KDE)
 
+# KIOFileWidgets
 [KImageFilePreview]
 IncludeFile=kimagefilepreview.h
 ToolTip=A widget that provides a image preview of a URL
 Group=Display (KDE)
 ConstructorArgs=(parent)
 
+# KXmlGui
 [KKeySequenceWidget]
 ToolTip=QKeySequence picker widget. (KDE)
 WhatsThis=A widget to pick a QKeySequence.
 IncludeFile=kkeysequencewidget.h
 Group=Buttons (KDE)
 
+# KConfigWidgets
 [KLanguageButton]
 ToolTip=Language Button (KDE)
 WhatsThis=KDE's language button.
 IncludeFile=klanguagebutton.h
 Group=Buttons (KDE)
 
+# KWidgetsAddons
 [KLed]
 ToolTip=LED Widget (KDE)
 WhatsThis=A widget showing a light emitter diode
 Group=Display (KDE)
 
+# KCompletion
 [KLineEdit]
 ToolTip=Line Edit (KDE)
 Group=Input (KDE)
 
+# KItemViews
 [KListWidgetSearchLine]
 ToolTip=QListWidget Search Line (KDE)
 Group=Input (KDE)
 ConstructorArgs=(parent, 0)
 
+# KWidgetsAddons
 [KMultiTabBar]
 ToolTip=Multi Tab Bar Widget (KDE)
 WhatsThis=A Widget for horizontal and vertical tabs.
 ConstructorArgs=(KMultiTabBar::Left, parent)
 Group=Display (KDE)
 
+# KWidgetsAddons
 [KPageView]
 ToolTip=Paged View (KDE)
 WhatsThis=A base class which can handle multiple pages.
 Group=Views (KDE)
 
+# KWidgetsAddons
 [KPageWidget]
 ToolTip=Paged Widget (KDE)
 WhatsThis=Page widget with many layouts (faces).
 Group=Views (KDE)
 
+# KWidgetsAddons
 [KPixmapRegionSelectorWidget]
 IncludeFile=kpixmapregionselectorwidget.h
 ToolTip=Pixmap Region Selector (KDE)
 Group=Graphics (KDE)
 
+# KWidgetsAddons
 [KPixmapSequenceWidget]
 ToolTip=Pixmap Sequence Widget (KDE)
 WhatsThis=A simple widget showing a fixed size pixmap sequence.
 Group=Display (KDE)
 
+# KPlotting
 [KPlotWidget]
 IncludeFile=kplotwidget.h
 ToolTip=A plot widget
 WhatsThis=A widget for easily making 2-dimensional plots
 Group=Plot (KDE)
 
+# KWidgetsAddons
 [KRatingWidget]
 IncludeFile=kratingwidget.h
 ToolTip=Rating value display (KDE)
 WhatsThis=Displays a rating as a range of stars or other arbitrary pixmaps.
 Group=Display (KDE)
 
+# KTextWidgets
 [KRichTextEdit]
 IncludeFile=krichtextedit.h
 ToolTip=Rich Text Editor (KDE)
 Group=Input (KDE)
 
+# KTextWidgets
 [KRichTextWidget]
 IncludeFile=krichtextwidget.h
 ToolTip=Rich Text Widget (KDE)
 Group=Input (KDE)
 
+# KWidgetsAddons
 [KRuler]
 ToolTip=Measuring Ruler Widget (KDE)
 WhatsThis=A measuring ruler widget as seen in KWord for page widths and heights
 Group=Display (KDE)
 
+# KWidgetsAddons
 [KSeparator]
 IncludeFile=kseparator.h
 ToolTip=Standard horizontal or vertical separator.
 Group=Display (KDE)
 
+# KXmlGui
 [KShortcutsEditor]
 ToolTip=Shortcuts editor widget. (KDE)
 WhatsThis=A widget to edit a list of shortcuts.
 IncludeFile=kshortcutseditor.h
 Group=Input (KDE)
 
+# KXmlGui
 [KShortcutWidget]
 ToolTip=Shortcut picker widget. (KDE)
 WhatsThis=A widget to pick a KShortcut.
 IncludeFile=kshortcutwidget.h
 Group=Buttons (KDE)
 
+# KWidgetsAddons
 [KSqueezedTextLabel]
 ToolTip=A QLabel that squeezes its text (KDE)
 WhatsThis=If the text is too long to fit into the label it is divided into remaining left and right parts which are separated by three dots
 ConstructorArgs=("KSqueezedTextLabel", parent)
 Group=Display (KDE)
 
+# KTextWidgets
 [KTextEdit]
 ToolTip=Improved QTextEdit (KDE)
 WhatsThis=An improved version of the QTextEdit with mail or system browser invocation support
 Group=Input (KDE)
 
+# KWidgetsAddons
 [KTitleWidget]
 ToolTip=Title box with label and icon
 WhatsThis=A styled frame to be used in title positions in dialogs and other widgets
 Group=Display (KDE)
 
+# KItemViews
 [KTreeWidgetSearchLine]
 ToolTip=QTreeWidget Search Line (KDE)
 Group=Input (KDE)
 ConstructorArgs=(parent, 0)
 
+# KItemViews
 [KTreeWidgetSearchLineWidget]
 ToolTip=QTreeWidget Search Line Widget (KDE)
 IncludeFile=ktreewidgetsearchlinewidget.h
 Group=Input (KDE)
 ConstructorArgs=(parent, 0)
 
+# KIOWidgets
 [KUrlComboRequester]
 ToolTip=URL Requester (KDE)
 WhatsThis=A widget holding a combobox and a pushbutton. A "file open" dialog opened when clicking on the pushbutton
 IncludeFile=kurlrequester.h
 Group=Input (KDE)
 
+# KWidgetsAddons
 [KUrlLabel]
 ToolTip=URL Label (KDE)
 ConstructorArgs=("KUrlLabel", QString(), parent)
 Group=Display (KDE)
 
+# KIOWidgets
 [KUrlRequester]
 ToolTip=URL Requester (KDE)
 WhatsThis=A widget holding a lineedit and a pushbutton. A "file open" dialog opened when clicking on the pushbutton
 Group=Input (KDE)
 
+# Sonnet
 [Sonnet::DictionaryComboBox]
 IncludeFile=sonnet/dictionarycombobox.h
 ToolTip=Dictionary Combobox
