@@ -24,30 +24,24 @@ find_package(KF5CoreAddons ${KF5_VERSION} REQUIRED)
 find_package(KF5Config ${KF5_VERSION} REQUIRED)
 find_package(KF5DocTools ${KF5_VERSION} REQUIRED)
 
-# Dependency hacks (private deps for things we actually need)
-find_package(KF5GuiAddons ${KF5_VERSION})
-find_package(KF5ConfigWidgets ${KF5_VERSION})
 find_package(KF5Completion ${KF5_VERSION})
-find_package(KF5DBusAddons ${KF5_VERSION})
-find_package(KF5Service ${KF5_VERSION})
-find_package(KF5WindowSystem ${KF5_VERSION})
-find_package(KF5XmlGui ${KF5_VERSION})
-find_package(KF5Bookmarks ${KF5_VERSION})
+set_package_properties(KF5Completion PROPERTIES TYPE OPTIONAL
+   PURPOSE "Required to build the Qt Designer plugin for KDE Frameworks widgets")
 
-find_package(KF5I18n ${KF5_VERSION})
-set_package_properties(KF5I18n PROPERTIES TYPE OPTIONAL
+find_package(KF5ConfigWidgets ${KF5_VERSION})
+set_package_properties(KF5ConfigWidgets PROPERTIES TYPE OPTIONAL
    PURPOSE "Required to build the Qt Designer plugin for KDE Frameworks widgets")
 
 find_package(KF5IconThemes ${KF5_VERSION})
 set_package_properties(KF5IconThemes PROPERTIES TYPE OPTIONAL
    PURPOSE "Required to build the Qt Designer plugin for KDE Frameworks widgets")
 
-find_package(KF5ItemViews ${KF5_VERSION})
-set_package_properties(KF5ItemViews PROPERTIES TYPE OPTIONAL
-   PURPOSE "Required to build the Qt Designer plugin for KDE Frameworks widgets")
-
 find_package(KF5KIO ${KF5_VERSION})
 set_package_properties(KF5KIO PROPERTIES TYPE OPTIONAL
+   PURPOSE "Required to build the Qt Designer plugin for KDE Frameworks widgets")
+
+find_package(KF5ItemViews ${KF5_VERSION})
+set_package_properties(KF5ItemViews PROPERTIES TYPE OPTIONAL
    PURPOSE "Required to build the Qt Designer plugin for KDE Frameworks widgets")
 
 find_package(KF5Plotting ${KF5_VERSION})
@@ -62,13 +56,22 @@ find_package(KF5WidgetsAddons ${KF5_VERSION})
 set_package_properties(KF5WidgetsAddons PROPERTIES TYPE OPTIONAL
    PURPOSE "Required to build the Qt Designer plugin for KDE Frameworks widgets")
 
+find_package(KF5XmlGui ${KF5_VERSION})
+set_package_properties(KF5XmlGui PROPERTIES TYPE OPTIONAL
+   PURPOSE "Required to build the Qt Designer plugin for KDE Frameworks widgets")
+
+find_package(KF5Sonnet ${KF5_VERSION})
+set_package_properties(KF5Sonnet PROPERTIES TYPE OPTIONAL
+   PURPOSE "Required to build the Qt Designer plugin for KDE Frameworks widgets")
+
 find_package(KF5WebKit ${KF5_VERSION})
 set_package_properties(KF5WebKit PROPERTIES TYPE OPTIONAL
    PURPOSE "Required to build the Qt Designer plugin for the KDEWebKit widgets")
 
-if(Qt5Designer_FOUND AND KF5I18n_FOUND AND KF5IconThemes_FOUND AND KF5ItemViews_FOUND
-    AND KF5KIO_FOUND AND KF5Plotting_FOUND AND KF5TextWidgets_FOUND AND KF5WidgetsAddons_FOUND)
-  set(BUILD_KF5_DESIGNER_PLUGIN TRUE)
+if(Qt5Designer_FOUND AND KF5Completion_FOUND AND KF5_ConfigWidgets_FOUND AND
+  KF5IconThemes_FOUND AND KF5KIO_Found AND KF5ItemViews_FOUND AND KF5Plotting_FOUND
+  AND KF5TextWidgets_FOUND AND KF5WidgetsAddons_FOUND AND KF5XmlGUI_FOUND AND KF5Sonnet_FOUND)
+    set(BUILD_KF5_DESIGNER_PLUGIN TRUE)
 endif()
 
 if(Qt5Designer_FOUND AND KF5WebKit_FOUND)
@@ -94,6 +97,4 @@ install( FILES
 
 install(EXPORT KF5DesignerPluginTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5DesignerPluginTargets.cmake NAMESPACE KF5:: )
 
-if ("${CMAKE_BINARY_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
-  feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)
-endif()
+feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)
