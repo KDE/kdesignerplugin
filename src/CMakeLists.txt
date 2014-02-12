@@ -42,7 +42,7 @@ if (BUILD_KF5_DESIGNER_PLUGIN)
   add_library(kf5widgets MODULE ${kf5widgets_PART_SRCS})
 
   target_link_libraries(kf5widgets KF5::Completion KF5::ConfigWidgets KF5::IconThemes KF5::KIOFileWidgets KF5::KIOWidgets
-    KF5::ItemViews KF5::Plotting KF5::TextWidgets KF5::WidgetsAddons KF5::XmlGui KF5::Sonnet)
+    KF5::ItemViews KF5::Plotting KF5::TextWidgets KF5::WidgetsAddons KF5::XmlGui KF5::SonnetCore)
   if(NOT WIN32)
     set_target_properties(kf5widgets PROPERTIES
                                      INSTALL_RPATH_USE_LINK_PATH TRUE

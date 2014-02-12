@@ -68,9 +68,9 @@ find_package(KF5WebKit ${KF5_VERSION})
 set_package_properties(KF5WebKit PROPERTIES TYPE OPTIONAL
    PURPOSE "Required to build the Qt Designer plugin for the KDEWebKit widgets")
 
-if(Qt5Designer_FOUND AND KF5Completion_FOUND AND KF5_ConfigWidgets_FOUND AND
-  KF5IconThemes_FOUND AND KF5KIO_Found AND KF5ItemViews_FOUND AND KF5Plotting_FOUND
-  AND KF5TextWidgets_FOUND AND KF5WidgetsAddons_FOUND AND KF5XmlGUI_FOUND AND KF5Sonnet_FOUND)
+if(Qt5Designer_FOUND AND KF5Completion_FOUND AND KF5ConfigWidgets_FOUND AND
+  KF5IconThemes_FOUND AND KF5KIO_FOUND AND KF5ItemViews_FOUND AND KF5Plotting_FOUND
+  AND KF5TextWidgets_FOUND AND KF5WidgetsAddons_FOUND AND KF5XmlGui_FOUND AND KF5Sonnet_FOUND)
     set(BUILD_KF5_DESIGNER_PLUGIN TRUE)
 endif()
 
