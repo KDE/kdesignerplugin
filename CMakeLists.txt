@@ -89,7 +89,8 @@ add_subdirectory(tests)
 include(ECMSetupVersion)
 ecm_setup_version(${KF5_VERSION} VARIABLE_PREFIX kf5designerplugin
                                  VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kf5designerplugin_version.h"
-                                 PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5DesignerPluginConfigVersion.cmake")
+                                 PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5DesignerPluginConfigVersion.cmake"
+                                 SOVERSION 5)
 
 install( FILES
     KF5DesignerPluginMacros.cmake KF5DesignerPluginConfig.cmake "${CMAKE_CURRENT_BINARY_DIR}/KF5DesignerPluginConfigVersion.cmake"
