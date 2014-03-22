@@ -13,8 +13,6 @@ target_link_libraries(kgendesignerplugin KF5::ConfigCore # KConfig + KConfigGrou
                                          KF5::CoreAddons # KMacroExpander
                                          )
 
-# "export" this target too so we can use the LOCATION property of the imported target in
-# FindKDE4Internal.cmake to get the full path to the installed executable instead of using FIND_PROGRAM(), Alex
 install(TARGETS kgendesignerplugin  EXPORT KF5DesignerPluginTargets ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
 
