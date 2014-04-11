@@ -6,7 +6,11 @@ add_subdirectory( pics )
 
 ########### next target ###############
 
-add_executable(kgendesignerplugin kgendesignerplugin.cpp ${kdesignerplugin_QM_LOADER})
+set(kgendesignerplugin_SRCS
+  kgendesignerplugin.cpp
+  ${kdesignerplugin_QM_LOADER}
+)
+add_executable(kgendesignerplugin ${kgendesignerplugin_SRCS})
 ecm_mark_nongui_executable(kgendesignerplugin)
 
 target_link_libraries(kgendesignerplugin KF5::ConfigCore # KConfig + KConfigGroup
