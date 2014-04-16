@@ -19,6 +19,8 @@ set_package_properties(Qt5Designer PROPERTIES
    TYPE OPTIONAL
 )
 
+include(ECMCreateQmFromPoFiles)
+
 set(KF5_VERSION "4.98.0")
 find_package(KF5CoreAddons ${KF5_VERSION} REQUIRED)
 find_package(KF5Config ${KF5_VERSION} REQUIRED)
@@ -83,14 +85,9 @@ remove_definitions(-DQT_NO_CAST_FROM_ASCII)
 set(CMAKECONFIG_INSTALL_DIR "${CMAKECONFIG_INSTALL_PREFIX}/KF5DesignerPlugin")
 
 add_subdirectory(docs)
-if (EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/po)
-  include(ECMCreateQmFromPoFiles)
-  ecm_create_qm_from_po_files(
-    PO_DIR po
-    POT_NAME kdesignerplugin5.pot
-    DATA_INSTALL_SUB_DIR kdesignerplugin
-    CREATE_LOADER kdesignerplugin_QM_LOADER
-  )
+file(GLOB PO_FILES "po/*.po")
+if (PO_FILES)
+  ecm_create_qm_from_po_files(PO_FILES ${PO_FILES} CATALOG_NAME kdesignerplugin5)
 endif()
 
 add_subdirectory(src)
