@@ -6,7 +6,7 @@ add_subdirectory( pics )
 
 ########### next target ###############
 
-ecm_create_qm_loader(kdesignerplugin_QM_LOADER kdesignerplugin5)
+ecm_create_qm_loader(kdesignerplugin_QM_LOADER kdesignerplugin5_qt)
 
 set(kgendesignerplugin_SRCS
   kgendesignerplugin.cpp
