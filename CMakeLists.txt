@@ -21,7 +21,7 @@ set_package_properties(Qt5Designer PROPERTIES
 
 include(ECMCreateQmFromPoFiles)
 
-set(KF5_VERSION "4.98.0") # handled by release scripts # handled by release scripts
+set(KF5_VERSION "4.98.0") # handled by release scripts
 set(KF5_DEP_VERSION "4.98.0") # handled by release scripts
 find_package(KF5CoreAddons ${KF5_DEP_VERSION} REQUIRED)
 find_package(KF5Config ${KF5_DEP_VERSION} REQUIRED)
