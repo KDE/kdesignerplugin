@@ -19,7 +19,7 @@ target_link_libraries(kgendesignerplugin KF5::ConfigCore # KConfig + KConfigGrou
                                          KF5::CoreAddons # KMacroExpander
                                          )
 
-install(TARGETS kgendesignerplugin  EXPORT KF5DesignerPluginTargets ${INSTALL_TARGETS_DEFAULT_ARGS} )
+install(TARGETS kgendesignerplugin  EXPORT KF5DesignerPluginTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS} )
 
 
 ########### next target ###############
