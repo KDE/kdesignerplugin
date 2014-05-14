@@ -93,11 +93,11 @@ int main(int argc, char **argv)
     parser.addOption(QCommandLineOption(QStringList() << "n", QCoreApplication::translate("main", "Name of the plugin class to generate (deprecated, use PluginName in the input file)."), "name", "WidgetsPlugin"));
     parser.addOption(QCommandLineOption(QStringList() << "g", QCoreApplication::translate("main", "Default widget group name to display in designer (deprecated, use DefaultGroup in the input file)."), "group", "Custom"));
 
-    KAboutData about("kgendesignerplugin", 0,
+    KAboutData about("kgendesignerplugin",
             QCoreApplication::translate("kgendesignerplugin about data", "kgendesignerplugin"),
             version,
             description,
-            KAboutData::License_GPL,
+            KAboutLicense::GPL,
             QCoreApplication::translate("kgendesignerplugin about data", "(C) 2004-2005 Ian Reinhart Geiser"),
             QString(),
             0,
