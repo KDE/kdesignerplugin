@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.12)
 
-project(KF5DesignerPlugin)
+project(KDesignerPlugin)
 
 find_package(ECM 0.0.13 REQUIRED NO_MODULE)
 
