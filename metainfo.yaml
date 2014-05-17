@@ -1,5 +1,5 @@
 maintainer: alexmerry
-description: Integration of our widgets in Qt Designer/Creator
+description: Integration of Frameworks widgets in Qt Designer/Creator
 tier: 3
 type: functional
 platforms:
