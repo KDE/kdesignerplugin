@@ -92,7 +92,6 @@ if (IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po")
 endif()
 
 add_subdirectory(src)
-add_subdirectory(tests)
 
 include(ECMSetupVersion)
 ecm_setup_version(${KF5_VERSION} VARIABLE_PREFIX kf5designerplugin
