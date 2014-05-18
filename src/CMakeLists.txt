@@ -46,11 +46,12 @@ if(BUILD_KF5_DESIGNER_PLUGIN)
         KF5::SonnetCore
     )
     if(NOT WIN32)
+        # Since there are no libraries provided by this module,
+        # there is no point including the build tree in RPath,
+        # and then having to edit it at install time.
         set_target_properties(kf5widgets PROPERTIES
-            INSTALL_RPATH_USE_LINK_PATH TRUE
             SKIP_BUILD_RPATH TRUE
             BUILD_WITH_INSTALL_RPATH TRUE
-            INSTALL_RPATH ${LIB_INSTALL_DIR}
         )
     endif()
 
@@ -66,11 +67,12 @@ if(BUILD_KDEWEBKIT_DESIGNER_PLUGIN)
 
     target_link_libraries(kdewebkitwidgets KF5::WebKit)
     if(NOT WIN32)
+        # Since there are no libraries provided by this module,
+        # there is no point including the build tree in RPath,
+        # and then having to edit it at install time.
         set_target_properties(kdewebkitwidgets PROPERTIES
-            INSTALL_RPATH_USE_LINK_PATH TRUE
             SKIP_BUILD_RPATH TRUE
             BUILD_WITH_INSTALL_RPATH TRUE
-            INSTALL_RPATH ${LIB_INSTALL_DIR}
         )
     endif()
 
