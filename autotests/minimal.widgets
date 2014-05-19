@@ -1,0 +1,5 @@
+[QPushButton]
+ToolTip=QPushButton Widget
+[QCheckBox]
+DummyEntry=
+[ThisIsIgnored]
