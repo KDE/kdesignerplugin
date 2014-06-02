@@ -64,6 +64,9 @@ endif()
 
 if(BUILD_KDEWEBKIT_DESIGNER_PLUGIN)
     kf5designerplugin_add_plugin(kdewebkitwidgets kdewebkit.widgets kdewebkitwidgets.qrc)
+    set_target_properties(kdewebkitwidgets PROPERTIES
+        OUTPUT_NAME kdewebkit5widgets
+    )
 
     target_link_libraries(kdewebkitwidgets KF5::WebKit)
     if(NOT WIN32)
