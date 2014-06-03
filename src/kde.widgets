@@ -254,6 +254,11 @@ ToolTip=Improved QTextEdit (KDE)
 WhatsThis=An improved version of the QTextEdit with mail or system browser invocation support
 Group=Input (KDE)
 
+[KPluralHandlingSpinBox]
+ToolTip=A QSpinBox with plural handling for the suffix (KDE)
+WhatsThis=A QSpinBox with plural handling for the suffix
+Group=Input (KDE)
+
 # KWidgetsAddons
 [KTitleWidget]
 ToolTip=Title box with label and icon
