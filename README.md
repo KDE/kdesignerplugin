@@ -100,9 +100,3 @@ you can use some combination of ImplClass and ConstructorArgs:
   are required
 
 
-## Links
-
-- Home page: <https://projects.kde.org/projects/frameworks/kdesignerplugin>
-- Mailing list: <https://mail.kde.org/mailman/listinfo/kde-frameworks-devel>
-- IRC channel: \#kde-devel on Freenode
-- Git repository: <https://projects.kde.org/projects/frameworks/kdesignerplugin/repository>
