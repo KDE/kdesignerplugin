@@ -1,0 +1,82 @@
+# translation of kdelibs4.po to Khmer
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2008, 2009, 2010, 2011, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2012-06-27 10:04+0700\n"
+"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
+"Language-Team: Khmer\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: KBabel 1.11.4\n"
+"X-Language: km-KH\n"
+
+#: kgendesignerplugin.cpp:84
+#, fuzzy
+#| msgid "Builds Qt widget plugins from an ini style description file."
+msgctxt "main|"
+msgid "Builds Qt widget plugins from an ini style description file."
+msgstr "ស្ថាបនា​កម្មវិធី​ជំនួយធាតុ​ក្រាហ្វិក Qt ពី​ឯកសារ​ពិពណ៌នា​រចនាប័ទ្ម ini ។"
+
+#: kgendesignerplugin.cpp:91
+#, fuzzy
+#| msgid "Input file"
+msgctxt "main|"
+msgid "Input file."
+msgstr "ឯកសារ​បញ្ចូល"
+
+#: kgendesignerplugin.cpp:92
+#, fuzzy
+#| msgid "Output file"
+msgctxt "main|"
+msgid "Output file."
+msgstr "ឯកសារ​លទ្ធផល"
+
+#: kgendesignerplugin.cpp:93
+#, fuzzy
+#| msgid "Name of the plugin class to generate"
+msgctxt "main|"
+msgid ""
+"Name of the plugin class to generate (deprecated, use PluginName in the "
+"input file)."
+msgstr "ឈ្មោះ​របស់​ថ្នាក់​​កម្មវិធី​ជំនួយ​ដែល​ត្រូវ​បង្កើត"
+
+#: kgendesignerplugin.cpp:94
+#, fuzzy
+#| msgid "Default widget group name to display in designer"
+msgctxt "main|"
+msgid ""
+"Default widget group name to display in designer (deprecated, use "
+"DefaultGroup in the input file)."
+msgstr "ឈ្មោះ​ក្រុមវត្ថុ​មើល​ឃើញ​លំនាំដើម ដើម្បី​បង្ហាញ​ក្នុង​កម្មវិធី​រចនា"
+
+#: kgendesignerplugin.cpp:97
+msgctxt "kgendesignerplugin about data|"
+msgid "kgendesignerplugin"
+msgstr ""
+
+#: kgendesignerplugin.cpp:101
+#, fuzzy
+#| msgid "(C) 2004-2005 Ian Reinhart Geiser"
+msgctxt "kgendesignerplugin about data|"
+msgid "(C) 2004-2005 Ian Reinhart Geiser"
+msgstr "រក្សាសិទ្ធិ​ឆ្នាំ ២០០៤-២០០៥ ដោយ Ian Reinhart Geiser"
+
+#: kgendesignerplugin.cpp:105
+#, fuzzy
+#| msgid "Ian Reinhart Geiser"
+msgctxt "kgendesignerplugin about data|"
+msgid "Ian Reinhart Geiser"
+msgstr "Ian Reinhart Geiser"
+
+#: kgendesignerplugin.cpp:106
+#, fuzzy
+#| msgid "Daniel Molkentin"
+msgctxt "kgendesignerplugin about data|"
+msgid "Daniel Molkentin"
+msgstr "Daniel Molkentin"
