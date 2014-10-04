@@ -1,0 +1,85 @@
+# Bengali (Bangla) translation of kdelibs4.
+# Copyright (C) 2009, Free Software Foundation, Inc.
+# translation of kdelibs4.po to Bengali
+# Copyright (C) 2003, 2004, 2005, 2006, 2008 Free Software Foundation, Inc.
+# Deepayan Sarkar,,, <deepayan.sarkar@gmail.com>, 2003.
+# Deepayan Sarkar <deepayan.sarkar@gmail.com>, 2003, 2004, 2005.
+# Deepayan Sarkar <deepayan.sarkar@gmail.com>, 2006, 2008, 2009..
+# Deepayan Sarkar <deepayan.sarkar@gmail.com>, 2009, 2010, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2012-07-16 14:27+0530\n"
+"Last-Translator: Deepayan Sarkar <deepayan.sarkar@gmail.com>\n"
+"Language-Team: American English <kde-translation@bengalinux.org>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.4\n"
+
+#: kgendesignerplugin.cpp:84
+#, fuzzy
+msgctxt "main|"
+msgid "Builds Qt widget plugins from an ini style description file."
+msgstr "একটি ini স্টাইল বর্ণনা ফাইল থেকে কিউ-টি উইজেট প্লাগিন নির্মাণ করো।"
+
+#: kgendesignerplugin.cpp:91
+#, fuzzy
+#| msgid "Input file"
+msgctxt "main|"
+msgid "Input file."
+msgstr "ইনপুট ফাইল"
+
+#: kgendesignerplugin.cpp:92
+#, fuzzy
+#| msgid "Output file"
+msgctxt "main|"
+msgid "Output file."
+msgstr "আউটপুট ফাইল"
+
+#: kgendesignerplugin.cpp:93
+#, fuzzy
+#| msgid "Name of the plugin class to generate"
+msgctxt "main|"
+msgid ""
+"Name of the plugin class to generate (deprecated, use PluginName in the "
+"input file)."
+msgstr "যে ক্লাস-এর প্লাগ-ইন উত্‍পাদন করা হবে তার নাম"
+
+#: kgendesignerplugin.cpp:94
+#, fuzzy
+msgctxt "main|"
+msgid ""
+"Default widget group name to display in designer (deprecated, use "
+"DefaultGroup in the input file)."
+msgstr "নকশাকারীতে প্রদর্শন করতে ডিফল্ট উইজেট শ্রেণী নাম"
+
+#: kgendesignerplugin.cpp:97
+msgctxt "kgendesignerplugin about data|"
+msgid "kgendesignerplugin"
+msgstr ""
+
+#: kgendesignerplugin.cpp:101
+#, fuzzy
+#| msgid "(C) 2004-2005 Ian Reinhart Geiser"
+msgctxt "kgendesignerplugin about data|"
+msgid "(C) 2004-2005 Ian Reinhart Geiser"
+msgstr "(C) 2004-2005 Ian Reinhart Geiser"
+
+#: kgendesignerplugin.cpp:105
+#, fuzzy
+#| msgid "Ian Reinhart Geiser"
+msgctxt "kgendesignerplugin about data|"
+msgid "Ian Reinhart Geiser"
+msgstr "Ian Reinhart Geiser"
+
+#: kgendesignerplugin.cpp:106
+#, fuzzy
+#| msgid "Daniel Molkentin"
+msgctxt "kgendesignerplugin about data|"
+msgid "Daniel Molkentin"
+msgstr "Daniel Molkentin"
