@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8.12)
 
 project(KDesignerPlugin)
 
-find_package(ECM 1.5.0 REQUIRED NO_MODULE)
+find_package(ECM 1.6.0 REQUIRED NO_MODULE)
 
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
@@ -22,7 +22,7 @@ set_package_properties(Qt5Designer PROPERTIES
 include(ECMPoQmTools)
 
 set(KF5_VERSION "5.6.0") # handled by release scripts
-set(KF5_DEP_VERSION "5.5.0") # handled by release scripts
+set(KF5_DEP_VERSION "5.6.0") # handled by release scripts
 find_package(KF5CoreAddons ${KF5_DEP_VERSION} REQUIRED)
 find_package(KF5Config ${KF5_DEP_VERSION} REQUIRED)
 find_package(KF5DocTools ${KF5_DEP_VERSION} REQUIRED)
