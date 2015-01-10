@@ -32,4 +32,4 @@ install( FILES
  kpalettetable.png
  kactionselector.png
  kdatetable.png
- DESTINATION  ${KF5_DATA_INSTALL_DIR}/widgets/pics)
+ DESTINATION  ${KDE_INSTALL_DATADIR_KF5}/widgets/pics)

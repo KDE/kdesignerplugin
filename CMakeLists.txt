@@ -83,7 +83,7 @@ endif()
 
 remove_definitions(-DQT_NO_CAST_FROM_ASCII)
 
-set(CMAKECONFIG_INSTALL_DIR "${CMAKECONFIG_INSTALL_PREFIX}/KF5DesignerPlugin")
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5DesignerPlugin")
 
 add_subdirectory(docs)
 if (IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po")
