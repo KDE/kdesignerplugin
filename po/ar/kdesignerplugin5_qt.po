@@ -1,0 +1,66 @@
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-28 15:38+0300\n"
+"PO-Revision-Date: 2014-06-17 21:56+0300\n"
+"Last-Translator: Safa Alfulaij <safa1996alfulaij@gmail.com>\n"
+"Language-Team: Arabic <kde-i18n-doc@kde.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Lokalize 1.5\n"
+"X-Qt-Contexts: true\n"
+
+#: kgendesignerplugin.cpp:84
+msgctxt "main|"
+msgid "Builds Qt widget plugins from an ini style description file."
+msgstr "يبني ملحقات ودجات كيوت من ملف نمط ini وصفي."
+
+#: kgendesignerplugin.cpp:91
+msgctxt "main|"
+msgid "Input file."
+msgstr "ملف الدَخْل."
+
+#: kgendesignerplugin.cpp:92
+msgctxt "main|"
+msgid "Output file."
+msgstr "ملف الخَرْج."
+
+#: kgendesignerplugin.cpp:93
+msgctxt "main|"
+msgid ""
+"Name of the plugin class to generate (deprecated, use PluginName in the "
+"input file)."
+msgstr ""
+
+#: kgendesignerplugin.cpp:94
+msgctxt "main|"
+msgid ""
+"Default widget group name to display in designer (deprecated, use "
+"DefaultGroup in the input file)."
+msgstr ""
+
+#: kgendesignerplugin.cpp:97
+msgctxt "kgendesignerplugin about data|"
+msgid "kgendesignerplugin"
+msgstr ""
+
+#: kgendesignerplugin.cpp:101
+msgctxt "kgendesignerplugin about data|"
+msgid "(C) 2004-2005 Ian Reinhart Geiser"
+msgstr ""
+
+#: kgendesignerplugin.cpp:105
+msgctxt "kgendesignerplugin about data|"
+msgid "Ian Reinhart Geiser"
+msgstr ""
+
+#: kgendesignerplugin.cpp:106
+msgctxt "kgendesignerplugin about data|"
+msgid "Daniel Molkentin"
+msgstr ""

@@ -1,0 +1,79 @@
+# translation of kdelibs4.po to Punjabi
+# Punjabi translation of kdelibs.
+# Copyright (C) 2004, 2005, 2007, 2008, 2009 Free Software Foundation, Inc.
+#
+# Amanpreet Singh Alam <amanlinux@netscape.net>, 2004.
+# Amanpreet Singh Alam <amanlinux@netscpe.net>, 2004.
+# A S Alam <aalam@users.sf.net>, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012.
+# ASB <aalam@users.sf.net>, 2007.
+# Amanpreet Singh Alam <apreet.alam@gmail.com>, 2008.
+# Amanpreet Singh <aalam@users.sf.net>, 2008.
+# Amanpreet Singh Alam <aalam@users.sf.net>, 2008, 2009, 2013, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2014-07-08 14:27-0500\n"
+"Last-Translator: A S Alam <aalam@users.sf.net>\n"
+"Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Qt-Contexts: true\n"
+
+#: kgendesignerplugin.cpp:84
+msgctxt "main|"
+msgid "Builds Qt widget plugins from an ini style description file."
+msgstr "ini ਸਟਾਇਲ ਵੇਰਵਾ ਫਾਈਲ ਤੋ Qt ਵਿਦਜੈਟ ਪਲੱਗਇਨ ਬਣਾਓ।"
+
+#: kgendesignerplugin.cpp:91
+msgctxt "main|"
+msgid "Input file."
+msgstr "ਇੰਪੁੱਟ ਫਾਈਲ"
+
+#: kgendesignerplugin.cpp:92
+msgctxt "main|"
+msgid "Output file."
+msgstr "ਆਉਟਪੁੱਟ ਫਾਈਲ"
+
+#: kgendesignerplugin.cpp:93
+#, fuzzy
+#| msgid "Name of the plugin class to generate"
+msgctxt "main|"
+msgid ""
+"Name of the plugin class to generate (deprecated, use PluginName in the "
+"input file)."
+msgstr "ਬਣਾਉਣ ਲਈ ਪਲੱਗਇਨ ਵਰਗ ਦਾ ਨਾਂ"
+
+#: kgendesignerplugin.cpp:94
+#, fuzzy
+#| msgid "Default widget group name to display in designer"
+msgctxt "main|"
+msgid ""
+"Default widget group name to display in designer (deprecated, use "
+"DefaultGroup in the input file)."
+msgstr "ਡਿਜ਼ਾਈਨਰ ਵਿੱਚ ਵੇਖਾਉਣ ਲਈ ਡਿਫਾਲਟ ਵਿਦਜੈਟ ਗਰੁੱਪ ਦਾ ਨਾਂ"
+
+#: kgendesignerplugin.cpp:97
+msgctxt "kgendesignerplugin about data|"
+msgid "kgendesignerplugin"
+msgstr "kgendesignerplugin"
+
+#: kgendesignerplugin.cpp:101
+msgctxt "kgendesignerplugin about data|"
+msgid "(C) 2004-2005 Ian Reinhart Geiser"
+msgstr "(C) 2004-2005 Ian Reinhart Geiser"
+
+#: kgendesignerplugin.cpp:105
+msgctxt "kgendesignerplugin about data|"
+msgid "Ian Reinhart Geiser"
+msgstr "Ian Reinhart Geiser"
+
+#: kgendesignerplugin.cpp:106
+msgctxt "kgendesignerplugin about data|"
+msgid "Daniel Molkentin"
+msgstr "ਡੈਨੀਅਲ ਮੋਲਕਿਨਟਿਨ"

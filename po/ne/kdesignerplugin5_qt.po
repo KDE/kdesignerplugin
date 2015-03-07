@@ -1,0 +1,89 @@
+# translation of kdelibs4.po to Nepali
+# Mahesh Subedi <submanesh@gmail.com>, 2006, 2007.
+# Shiva Prasad Pokharel <pokharelshiva@hotmail.com>, 2006, 2007.
+# shyam krishna ball <shyam@mpp.org.np>, 2006.
+# shyam krishna bal <shyamkrishna_bal@yahoo.com>, 2006, 2007.
+# Shiva Pokharel <shiva@mpp.org.np>, 2007.
+# Nabin Gautam <nabin@mpp.org.np>, 2007.
+# Shiva Prasad Pokharel <pokharelshiv@gmail.com>, 2007.
+# Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2007-11-05 15:41+0545\n"
+"Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
+"Language-Team: Nepali <info@mpp.org.np>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n !=1\n"
+"X-Generator: KBabel 1.11.4\n"
+"X-Qt-Contexts: true\n"
+
+#: kgendesignerplugin.cpp:84
+#, fuzzy
+#| msgid "Builds Qt widget plugins from an ini style description file."
+msgctxt "main|"
+msgid "Builds Qt widget plugins from an ini style description file."
+msgstr "ini शैली वर्णन फाइलबाट Qt विजेट प्लगइन निर्माण गर्दछ ।"
+
+#: kgendesignerplugin.cpp:91
+#, fuzzy
+#| msgid "Input file"
+msgctxt "main|"
+msgid "Input file."
+msgstr "आगत फाइल"
+
+#: kgendesignerplugin.cpp:92
+#, fuzzy
+#| msgid "Output file"
+msgctxt "main|"
+msgid "Output file."
+msgstr "निर्गत फाइल"
+
+#: kgendesignerplugin.cpp:93
+#, fuzzy
+#| msgid "Name of the plugin class to generate"
+msgctxt "main|"
+msgid ""
+"Name of the plugin class to generate (deprecated, use PluginName in the "
+"input file)."
+msgstr "सिर्जना गरिने प्लगइन वर्गको नाम"
+
+#: kgendesignerplugin.cpp:94
+#, fuzzy
+#| msgid "Default widget group name to display in designer"
+msgctxt "main|"
+msgid ""
+"Default widget group name to display in designer (deprecated, use "
+"DefaultGroup in the input file)."
+msgstr "डिजाइनरमा प्रर्दशन गरिने पूर्वनिर्धारित विजेट समूह नाम"
+
+#: kgendesignerplugin.cpp:97
+msgctxt "kgendesignerplugin about data|"
+msgid "kgendesignerplugin"
+msgstr ""
+
+#: kgendesignerplugin.cpp:101
+#, fuzzy
+#| msgid "(C) 2004-2005 Ian Reinhart Geiser"
+msgctxt "kgendesignerplugin about data|"
+msgid "(C) 2004-2005 Ian Reinhart Geiser"
+msgstr "(C) 2004-2005 इआन रेइनहार्ट गेइसर"
+
+#: kgendesignerplugin.cpp:105
+#, fuzzy
+#| msgid "Ian Reinhart Geiser"
+msgctxt "kgendesignerplugin about data|"
+msgid "Ian Reinhart Geiser"
+msgstr "इआन रेइनहार्ट गेइसर"
+
+#: kgendesignerplugin.cpp:106
+#, fuzzy
+#| msgid "Daniel Molkentin"
+msgctxt "kgendesignerplugin about data|"
+msgid "Daniel Molkentin"
+msgstr "डानियल मोल्केन्टिन"
