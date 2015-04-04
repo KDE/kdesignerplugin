@@ -1,0 +1,84 @@
+# translation of kdelibs4.po to galician
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# mvillarino <mvillarino@users.sourceforge.net>, 2007, 2008, 2009.
+# Marce Villarino <mvillarino@kde-espana.es>, 2008, 2009.
+# marce villarino <mvillarino@users.sourceforge.net>, 2009.
+# marce villarino <mvillarino@gmail.com>, 2009.
+# Marce Villarino <mvillarino@kde-espana.es>, 2009, 2010, 2011, 2012.
+# Xosé <xosecalvo@gmail.com>, 2010.
+# Marce Villarino <mvillarino@kde-espana.es>, 2011, 2012, 2013, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2014-05-12 23:33+0200\n"
+"Last-Translator: Marce Villarino <mvillarino@kde-espana.org>\n"
+"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.5\n"
+"X-Environment: kde, development\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Qt-Contexts: true\n"
+
+#: kgendesignerplugin.cpp:84
+msgctxt "main|"
+msgid "Builds Qt widget plugins from an ini style description file."
+msgstr ""
+"Constrúe complementos de widget de Qt a partir dun ficheiro de descrición ao "
+"estilo ini."
+
+#: kgendesignerplugin.cpp:91
+msgctxt "main|"
+msgid "Input file."
+msgstr "Ficheiro de entrada."
+
+#: kgendesignerplugin.cpp:92
+msgctxt "main|"
+msgid "Output file."
+msgstr "Ficheiro de saída."
+
+#: kgendesignerplugin.cpp:93
+msgctxt "main|"
+msgid ""
+"Name of the plugin class to generate (deprecated, use PluginName in the "
+"input file)."
+msgstr ""
+"Nome da clase de complemento que se vai xerar (obsoleto, use PluginName no "
+"ficheiro de entrada)."
+
+#: kgendesignerplugin.cpp:94
+msgctxt "main|"
+msgid ""
+"Default widget group name to display in designer (deprecated, use "
+"DefaultGroup in the input file)."
+msgstr ""
+"Nome predeterminado do grupo de widgets que se mostran no Designer "
+"(obsoleto, use DefaultGroup no ficheiro de entrada)."
+
+#: kgendesignerplugin.cpp:97
+msgctxt "kgendesignerplugin about data|"
+msgid "kgendesignerplugin"
+msgstr "kgendesignerplugin"
+
+#: kgendesignerplugin.cpp:101
+msgctxt "kgendesignerplugin about data|"
+msgid "(C) 2004-2005 Ian Reinhart Geiser"
+msgstr "(C) 2004-2005 Ian Reinhart Geiser"
+
+#: kgendesignerplugin.cpp:105
+msgctxt "kgendesignerplugin about data|"
+msgid "Ian Reinhart Geiser"
+msgstr "Ian Reinhart Geiser"
+
+#: kgendesignerplugin.cpp:106
+msgctxt "kgendesignerplugin about data|"
+msgid "Daniel Molkentin"
+msgstr "Daniel Molkentin"

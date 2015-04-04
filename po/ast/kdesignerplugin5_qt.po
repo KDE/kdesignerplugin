@@ -1,0 +1,77 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# enolp <enolp@softastur.org>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4-1\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2015-03-15 18:03+0100\n"
+"Last-Translator: enolp <enolp@softastur.org>\n"
+"Language-Team: Asturian <kde-i18n-doc@kde.org>\n"
+"Language: ast_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: asturian\n"
+"X-Qt-Contexts: true\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: kgendesignerplugin.cpp:84
+#, fuzzy
+#| msgid "Builds Qt widget plugins from an ini style description file."
+msgctxt "main|"
+msgid "Builds Qt widget plugins from an ini style description file."
+msgstr ""
+"Crea complementos de widget de Qt dende un ficheru de descripción d'estilu."
+
+#: kgendesignerplugin.cpp:91
+msgctxt "main|"
+msgid "Input file."
+msgstr "Ficheru d'entrada."
+
+#: kgendesignerplugin.cpp:92
+msgctxt "main|"
+msgid "Output file."
+msgstr "Ficheru de salida."
+
+#: kgendesignerplugin.cpp:93
+#, fuzzy
+#| msgid "Name of the plugin class to generate"
+msgctxt "main|"
+msgid ""
+"Name of the plugin class to generate (deprecated, use PluginName in the "
+"input file)."
+msgstr "Nome de la clase de complementu a xenerar"
+
+#: kgendesignerplugin.cpp:94
+#, fuzzy
+#| msgid "Default widget group name to display in designer"
+msgctxt "main|"
+msgid ""
+"Default widget group name to display in designer (deprecated, use "
+"DefaultGroup in the input file)."
+msgstr "Nome de grupu de widget predetermináu p'amosar nel diseñador"
+
+#: kgendesignerplugin.cpp:97
+#, fuzzy
+msgctxt "kgendesignerplugin about data|"
+msgid "kgendesignerplugin"
+msgstr "kgendesignerplugin"
+
+#: kgendesignerplugin.cpp:101
+msgctxt "kgendesignerplugin about data|"
+msgid "(C) 2004-2005 Ian Reinhart Geiser"
+msgstr "(C) 2004-2005 Ian Reinhart Geiser"
+
+#: kgendesignerplugin.cpp:105
+msgctxt "kgendesignerplugin about data|"
+msgid "Ian Reinhart Geiser"
+msgstr "Ian Reinhart Geiser"
+
+#: kgendesignerplugin.cpp:106
+msgctxt "kgendesignerplugin about data|"
+msgid "Daniel Molkentin"
+msgstr "Daniel Molkentin"
