@@ -8,6 +8,13 @@ ToolTip=A widget for selecting and arranging actions/objects
 Group=Views (KDE)
 
 # KWidgetsAddons
+[KMessageWidget]
+IncludeFile=kmessagewidget.h
+ToolTip=Display an information or error message in an animated bubble.
+Group=Display (KDE)
+ConstructorArgs=(parent)
+
+# KWidgetsAddons
 [KAnimatedButton]
 IncludeFile=kanimatedbutton.h
 ToolTip=An extended version of QToolButton which can display an animated icon.
