@@ -15,7 +15,7 @@ include(KDEFrameworkCompilerSettings)
 include(KDECMakeSettings)
 
 
-set(REQUIRED_QT_VERSION 5.2.0)
+set(REQUIRED_QT_VERSION 5.3.0)
 find_package(Qt5Core ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
 find_package(Qt5Designer ${REQUIRED_QT_VERSION} NO_MODULE)
 set_package_properties(Qt5Designer PROPERTIES
