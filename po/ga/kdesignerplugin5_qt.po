@@ -1,0 +1,87 @@
+# translation of kdelibs4.po to Irish
+# Translation of kdelibs4.po to Irish
+# Copyright (C) 1999,2003,2004 Free Software Foundation, Inc.
+# Sean V. Kelley <s_oceallaigh@yahoo.com>, 1999
+# Séamus Ó Ciardhuáin <seoc at iolfree.ie>, 2003,2004
+# Kevin Scannell <kscanne@gmail.com>, 2004-2009
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2004-12-14 09:11-0600\n"
+"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
+"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
+"3 : 4\n"
+"X-Qt-Contexts: true\n"
+
+#: kgendesignerplugin.cpp:88
+#, fuzzy
+#| msgid "Builds Qt widget plugins from an ini style description file."
+msgctxt "main|"
+msgid "Builds Qt widget plugins from an ini style description file."
+msgstr "Déanann breiseáin ghiuirléid Qt as comhad den stíl ini."
+
+#: kgendesignerplugin.cpp:95
+#, fuzzy
+#| msgid "Input file"
+msgctxt "main|"
+msgid "Input file."
+msgstr "Inchomhad"
+
+#: kgendesignerplugin.cpp:96
+#, fuzzy
+#| msgid "Output file"
+msgctxt "main|"
+msgid "Output file."
+msgstr "Aschomhad"
+
+#: kgendesignerplugin.cpp:97
+#, fuzzy
+#| msgid "Name of the plugin class to generate"
+msgctxt "main|"
+msgid ""
+"Name of the plugin class to generate (deprecated, use PluginName in the "
+"input file)."
+msgstr "Ainm na haicme breiseáin le giniúint"
+
+#: kgendesignerplugin.cpp:98
+#, fuzzy
+#| msgid "Default widget group name to display in designer"
+msgctxt "main|"
+msgid ""
+"Default widget group name to display in designer (deprecated, use "
+"DefaultGroup in the input file)."
+msgstr "Ainm an ghrúpa réamhshocraithe giuirléidí le taispeáint sa dearthóir"
+
+#: kgendesignerplugin.cpp:101
+msgctxt "kgendesignerplugin about data|"
+msgid "kgendesignerplugin"
+msgstr ""
+
+#: kgendesignerplugin.cpp:105
+#, fuzzy
+#| msgid "(C) 2004-2005 Ian Reinhart Geiser"
+msgctxt "kgendesignerplugin about data|"
+msgid "(C) 2004-2005 Ian Reinhart Geiser"
+msgstr "© 2004-2005 Ian Reinhart Geiser"
+
+#: kgendesignerplugin.cpp:109
+#, fuzzy
+#| msgid "Ian Reinhart Geiser"
+msgctxt "kgendesignerplugin about data|"
+msgid "Ian Reinhart Geiser"
+msgstr "Ian Reinhart Geiser"
+
+#: kgendesignerplugin.cpp:110
+#, fuzzy
+#| msgid "Daniel Molkentin"
+msgctxt "kgendesignerplugin about data|"
+msgid "Daniel Molkentin"
+msgstr "Daniel Molkentin"
