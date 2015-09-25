@@ -87,9 +87,22 @@ macro(kf5designerplugin_add_plugin target)
             PURPOSE "Required to build Qt Designer plugins"
         )
     endif()
+    if(NOT Qt5Designer_VERSION_STRING VERSION_LESS 5.5.0 AND NOT Qt5UiPlugin_FOUND)
+        find_package(Qt5UiPlugin ${REQUIRED_QT_VERSION} ${_requiredarg} NO_MODULE)
+        set_package_properties(Qt5UiPlugin PROPERTIES
+            PURPOSE "Required to build Qt Designer plugins"
+        )
+    endif()
+    if (Qt5UiPlugin_FOUND)
+        # for some reason, Qt5UiPlugin does not set its _INCLUDE_DIRS variable. Fill it manually
+        get_target_property(Qt5UiPlugin_INCLUDE_DIRS Qt5::UiPlugin INTERFACE_INCLUDE_DIRECTORIES)
+    endif()
     if(Qt5Designer_FOUND)
         add_library(${target} MODULE ${_files})
-        target_include_directories(${target} PRIVATE ${Qt5Designer_INCLUDE_DIRS})
+        target_include_directories(${target}
+             PRIVATE ${Qt5UiPlugin_INCLUDE_DIRS}
+             PRIVATE ${Qt5Designer_INCLUDE_DIRS}
+        )
     endif()
 endmacro()
 
