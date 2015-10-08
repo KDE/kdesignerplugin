@@ -87,7 +87,7 @@ macro(kf5designerplugin_add_plugin target)
             PURPOSE "Required to build Qt Designer plugins"
         )
     endif()
-    if(NOT Qt5Designer_VERSION_STRING VERSION_LESS 5.5.0 AND NOT Qt5UiPlugin_FOUND)
+    if(NOT Qt5Designer_VERSION_STRING VERSION_LESS 5.5.0 AND NOT Qt5UiPlugin_FOUND AND NOT CMAKE_VERSION VERSION_LESS 3.0.0)
         find_package(Qt5UiPlugin ${REQUIRED_QT_VERSION} ${_requiredarg} NO_MODULE)
         set_package_properties(Qt5UiPlugin PROPERTIES
             PURPOSE "Required to build Qt Designer plugins"
