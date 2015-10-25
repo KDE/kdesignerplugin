@@ -42,6 +42,14 @@ Group=Graphics (KDE)
 ConstructorArgs=(parent, 0)
 
 # KWidgetsAddons
+[KCollapsibleGroupBox]
+IncludeFile=kcollapsiblegroupbox.h
+ToolTip=A group box which can be expanded and collapsed
+Group=Display (KDE)
+IsContainer=true
+ConstructorArgs=(parent)
+
+# KWidgetsAddons
 [KColorButton]
 ToolTip=Color Chooser Button (KDE)
 WhatsThis=A button that allows selecting a color
