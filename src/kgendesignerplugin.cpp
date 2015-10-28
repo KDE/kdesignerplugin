@@ -60,14 +60,14 @@ static const char classDef[] =  "class %PluginName : public QObject, public QDes
                                 "	\n"
                                 "	bool isContainer() const { return %IsContainer; }\n"
                                 "	bool isInitialized() const { return mInitialized; }\n"
-                                "	QIcon icon() const { return QIcon(QLatin1String(\"%IconName\")); }\n"
-                                "	QString codeTemplate() const { return QLatin1String(\"%CodeTemplate\");}\n"
+                                "	QIcon icon() const { return QIcon(QStringLiteral(\"%IconName\")); }\n"
+                                "	QString codeTemplate() const { return QStringLiteral(\"%CodeTemplate\");}\n"
                                 "	QString domXml() const { return %DomXml; }\n"
-                                "	QString group() const { return QLatin1String(\"%Group\"); }\n"
-                                "	QString includeFile() const { return QLatin1String(\"%IncludeFile\"); }\n"
-                                "	QString name() const { return QLatin1String(\"%Class\"); }\n"
-                                "	QString toolTip() const { return QLatin1String(\"%ToolTip\"); }\n"
-                                "	QString whatsThis() const { return QLatin1String(\"%WhatsThis\"); }\n\n"
+                                "	QString group() const { return QStringLiteral(\"%Group\"); }\n"
+                                "	QString includeFile() const { return QStringLiteral(\"%IncludeFile\"); }\n"
+                                "	QString name() const { return QStringLiteral(\"%Class\"); }\n"
+                                "	QString toolTip() const { return QStringLiteral(\"%ToolTip\"); }\n"
+                                "	QString whatsThis() const { return QStringLiteral(\"%WhatsThis\"); }\n\n"
                                 "	QWidget* createWidget( QWidget* parent ) \n\t{%CreateWidget\n\t}\n"
                                 "	void initialize(QDesignerFormEditorInterface *core) \n\t{%Initialize\n\t}\n"
                                 "\n"
@@ -215,10 +215,9 @@ QString buildWidgetClass(const QString &name, KConfig &_input, const QString &gr
     QString domXml = input.readEntry("DomXML", QString());
     // If domXml is empty then we should call base class function
     if (domXml.isEmpty()) {
-        domXml = QLatin1String("QDesignerCustomWidgetInterface::domXml()");
+        domXml = QStringLiteral("QDesignerCustomWidgetInterface::domXml()");
     } else {
-        // Wrap domXml value into QLatin1String
-        domXml = QString(QLatin1String("QLatin1String(\"%1\")")).arg(domXml.replace('\"', "\\\""));
+        domXml = QStringLiteral("QStringLiteral(\"%1\")").arg(domXml.replace('\"', "\\\""));
     }
     defMap.insert("DomXml", domXml);
     defMap.insert("CodeTemplate", input.readEntry("CodeTemplate"));
