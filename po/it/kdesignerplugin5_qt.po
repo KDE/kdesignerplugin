@@ -1,0 +1,83 @@
+# translation of kdelibs4.po to Italian
+# Andrea Rizzi <rizzi@kde.org>, 2003, 2004, 2005.
+# Federico Cozzi <federicocozzi@federicocozzi.it>, 2004.
+# Federico Zenith <federico.zenith@member.fsf.org>, 2004, 2008, 2009, 2010, 2011.
+# Andrea Rizzi <Andrea.Rizzi@sns.it>, 2004.
+# Nicola Ruggero <nixprog.adsl@tiscali.it>, 2005, 2006.
+# Nicola Ruggero <nicola@nxnt.org>, 2006, 2007, 2010.
+# Luciano Montanaro <mikelima@cirulla.net>, 2007.
+# Dario Panico <Dareus_Persarumrex@fastwebnet.it>, 2008.
+# Pino Toscano <toscano.pino@tiscali.it>, 2008.
+# Federico Zenith <federico.zenith@member.fsf.org>, 2008, 2012, 2013, 2014, 2015.
+# Innocenzo Ventre <innocenzo.ventre@gmail.com>, 2012.
+# Vincenzo Reale <smart2128@baslug.org>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2014-04-19 12:11+0200\n"
+"Last-Translator: Vincenzo Reale <smart2128@baslug.org>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.5\n"
+"X-Qt-Contexts: true\n"
+
+#: kgendesignerplugin.cpp:88
+msgctxt "main|"
+msgid "Builds Qt widget plugins from an ini style description file."
+msgstr ""
+"Crea estensioni di elementi grafici Qt da un file di descrizione in stile ."
+"ini."
+
+#: kgendesignerplugin.cpp:95
+msgctxt "main|"
+msgid "Input file."
+msgstr "File di ingresso."
+
+#: kgendesignerplugin.cpp:96
+msgctxt "main|"
+msgid "Output file."
+msgstr "File di uscita."
+
+#: kgendesignerplugin.cpp:97
+msgctxt "main|"
+msgid ""
+"Name of the plugin class to generate (deprecated, use PluginName in the "
+"input file)."
+msgstr ""
+"Nome della classe delle estensioni da generare (non consigliato, utilizza "
+"PluginName nel file di ingresso)."
+
+#: kgendesignerplugin.cpp:98
+msgctxt "main|"
+msgid ""
+"Default widget group name to display in designer (deprecated, use "
+"DefaultGroup in the input file)."
+msgstr ""
+"Nome predefinito del gruppo di elementi grafici che verrà mostrato nel "
+"designer (non consigliato, utilizza DefaultGroup nel file di ingresso)."
+
+#: kgendesignerplugin.cpp:101
+msgctxt "kgendesignerplugin about data|"
+msgid "kgendesignerplugin"
+msgstr "kgendesignerplugin"
+
+#: kgendesignerplugin.cpp:105
+msgctxt "kgendesignerplugin about data|"
+msgid "(C) 2004-2005 Ian Reinhart Geiser"
+msgstr "(C) 2004-2005 Ian Reinhart Geiser"
+
+#: kgendesignerplugin.cpp:109
+msgctxt "kgendesignerplugin about data|"
+msgid "Ian Reinhart Geiser"
+msgstr "Ian Reinhart Geiser"
+
+#: kgendesignerplugin.cpp:110
+msgctxt "kgendesignerplugin about data|"
+msgid "Daniel Molkentin"
+msgstr "Daniel Molkentin"
