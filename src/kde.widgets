@@ -181,6 +181,12 @@ ConstructorArgs=(KMultiTabBar::Left, parent)
 Group=Display (KDE)
 
 # KWidgetsAddons
+[KNewPasswordWidget]
+ToolTip=A password input widget
+WhatsThis=This widget allows the user to enter a new password.
+Group=Input (KDE)
+
+# KWidgetsAddons
 [KPageView]
 ToolTip=Paged View (KDE)
 WhatsThis=A base class which can handle multiple pages.
