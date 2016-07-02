@@ -19,11 +19,16 @@
  * <http://www.gnu.org/licenses/>.
  */
 
-#include <QtUiPlugin/QDesignerCustomWidgetInterface>
 #include <QGroupBox>
 #include <QMetaObject>
 #include <QPluginLoader>
 #include <QTest>
+
+#if QT_VERSION >= QT_VERSION_CHECK(5, 5, 0)
+#include <QtUiPlugin/QDesignerCustomWidgetInterface>
+#else
+#include <QDesignerCustomWidgetInterface>
+#endif
 
 static bool widgetLessThan(QDesignerCustomWidgetInterface* w1, QDesignerCustomWidgetInterface* w2)
 {
