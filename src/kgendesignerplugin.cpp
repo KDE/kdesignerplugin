@@ -31,48 +31,48 @@ static const char classHeader[] =   "/**\n"
 
 static const char collClassDef[] = "class %CollName : public QObject, public QDesignerCustomWidgetCollectionInterface\n"
                                    "{\n"
-                                   "	Q_OBJECT\n"
-                                   "	Q_INTERFACES(QDesignerCustomWidgetCollectionInterface)\n"
+                                   "    Q_OBJECT\n"
+                                   "    Q_INTERFACES(QDesignerCustomWidgetCollectionInterface)\n"
                                    "       Q_PLUGIN_METADATA(IID \"org.qt-project.Qt.QDesignerCustomWidgetInterface\")\n"
                                    "public:\n"
-                                   "	%CollName(QObject *parent = 0);\n"
-                                   "	virtual ~%CollName() {}\n"
-                                   "	QList<QDesignerCustomWidgetInterface*> customWidgets() const { return m_plugins; } \n"
-                                   "	\n"
+                                   "    %CollName(QObject *parent = 0);\n"
+                                   "    virtual ~%CollName() {}\n"
+                                   "    QList<QDesignerCustomWidgetInterface*> customWidgets() const Q_DECL_OVERRIDE { return m_plugins; } \n"
+                                   "    \n"
                                    "private:\n"
-                                   "	QList<QDesignerCustomWidgetInterface*> m_plugins;\n"
+                                   "    QList<QDesignerCustomWidgetInterface*> m_plugins;\n"
                                    "};\n\n"
                                    ;
 
 static const char collClassImpl[] = "%CollName::%CollName(QObject *parent)\n"
-                                    "	: QObject(parent)"
+                                    "   : QObject(parent)"
                                     "{\n"
                                     "%CollectionAdd\n"
                                     "}\n\n";
 
 static const char classDef[] =  "class %PluginName : public QObject, public QDesignerCustomWidgetInterface\n"
                                 "{\n"
-                                "	Q_OBJECT\n"
-                                "	Q_INTERFACES(QDesignerCustomWidgetInterface)\n"
+                                "       Q_OBJECT\n"
+                                "       Q_INTERFACES(QDesignerCustomWidgetInterface)\n"
                                 "public:\n"
-                                "	%PluginName(QObject *parent = 0) :\n\t\tQObject(parent), mInitialized(false) {}\n"
-                                "	virtual ~%PluginName() {}\n"
-                                "	\n"
-                                "	bool isContainer() const { return %IsContainer; }\n"
-                                "	bool isInitialized() const { return mInitialized; }\n"
-                                "	QIcon icon() const { return QIcon(QStringLiteral(\"%IconName\")); }\n"
-                                "	QString codeTemplate() const { return QStringLiteral(\"%CodeTemplate\");}\n"
-                                "	QString domXml() const { return %DomXml; }\n"
-                                "	QString group() const { return QStringLiteral(\"%Group\"); }\n"
-                                "	QString includeFile() const { return QStringLiteral(\"%IncludeFile\"); }\n"
-                                "	QString name() const { return QStringLiteral(\"%Class\"); }\n"
-                                "	QString toolTip() const { return QStringLiteral(\"%ToolTip\"); }\n"
-                                "	QString whatsThis() const { return QStringLiteral(\"%WhatsThis\"); }\n\n"
-                                "	QWidget* createWidget( QWidget* parent ) \n\t{%CreateWidget\n\t}\n"
-                                "	void initialize(QDesignerFormEditorInterface *core) \n\t{%Initialize\n\t}\n"
+                                "       %PluginName(QObject *parent = 0) :\n            QObject(parent), mInitialized(false) {}\n"
+                                "       virtual ~%PluginName() {}\n"
+                                "       \n"
+                                "       bool isContainer() const Q_DECL_OVERRIDE { return %IsContainer; }\n"
+                                "       bool isInitialized() const Q_DECL_OVERRIDE { return mInitialized; }\n"
+                                "       QIcon icon() const Q_DECL_OVERRIDE { return QIcon(QStringLiteral(\"%IconName\")); }\n"
+                                "       QString codeTemplate() const Q_DECL_OVERRIDE { return QStringLiteral(\"%CodeTemplate\"); }\n"
+                                "       QString domXml() const Q_DECL_OVERRIDE { return %DomXml; }\n"
+                                "       QString group() const Q_DECL_OVERRIDE { return QStringLiteral(\"%Group\"); }\n"
+                                "       QString includeFile() const Q_DECL_OVERRIDE { return QStringLiteral(\"%IncludeFile\"); }\n"
+                                "       QString name() const Q_DECL_OVERRIDE { return QStringLiteral(\"%Class\"); }\n"
+                                "       QString toolTip() const Q_DECL_OVERRIDE { return QStringLiteral(\"%ToolTip\"); }\n"
+                                "       QString whatsThis() const Q_DECL_OVERRIDE { return QStringLiteral(\"%WhatsThis\"); }\n\n"
+                                "       QWidget* createWidget( QWidget* parent ) Q_DECL_OVERRIDE \n       {%CreateWidget\n       }\n"
+                                "       void initialize(QDesignerFormEditorInterface *core) Q_DECL_OVERRIDE \n       {%Initialize\n       }\n"
                                 "\n"
                                 "private:\n"
-                                "	bool mInitialized;\n"
+                                "       bool mInitialized;\n"
                                 "};\n\n";
 
 static QString denamespace(const QString &str);
@@ -187,7 +187,7 @@ QString buildCollClass(KConfig &_input, const QStringList &classes, const QStrin
     QString genCode;
 
     foreach (const QString &myClass, classes) {
-        genCode += QString("\t\tm_plugins.append( new %1(this) );\n").arg(denamespace(myClass) + "Plugin");
+        genCode += QString("                m_plugins.append( new %1(this) );\n").arg(denamespace(myClass) + "Plugin");
     }
 
     defMap.insert("CollectionAdd", genCode);
@@ -222,10 +222,10 @@ QString buildWidgetClass(const QString &name, KConfig &_input, const QString &gr
     defMap.insert("DomXml", domXml);
     defMap.insert("CodeTemplate", input.readEntry("CodeTemplate"));
     defMap.insert("CreateWidget", input.readEntry("CreateWidget",
-                  QString("\n\t\treturn new %1%2;")
+                  QString("\n            return new %1%2;")
                   .arg(input.readEntry("ImplClass", name))
                   .arg(input.readEntry("ConstructorArgs", "( parent )"))));
-    defMap.insert("Initialize", input.readEntry("Initialize", "\n\t\tQ_UNUSED(core);\n\t\tif (mInitialized) return;\n\t\tmInitialized=true;"));
+    defMap.insert("Initialize", input.readEntry("Initialize", "\n            Q_UNUSED(core);\n            if (mInitialized) return;\n            mInitialized=true;"));
 
     return KMacroExpander::expandMacros(classDef, defMap);
 }
