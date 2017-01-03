@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.0)
 
-project(KDesignerPlugin)
+set(KF5_VERSION "5.30.0") # handled by release scripts
+set(KF5_DEP_VERSION "5.29.0") # handled by release scripts
+project(KDesignerPlugin VERSION ${KF5_VERSION})
 
 include(FeatureSummary)
 find_package(ECM 5.29.0  NO_MODULE)
@@ -25,8 +27,6 @@ set_package_properties(Qt5Designer PROPERTIES
 
 include(ECMPoQmTools)
 
-set(KF5_VERSION "5.30.0") # handled by release scripts
-set(KF5_DEP_VERSION "5.29.0") # handled by release scripts
 find_package(KF5CoreAddons ${KF5_DEP_VERSION} REQUIRED)
 find_package(KF5Config ${KF5_DEP_VERSION} REQUIRED)
 find_package(KF5DocTools ${KF5_DEP_VERSION} REQUIRED)
@@ -101,7 +101,7 @@ if (BUILD_TESTING)
 endif()
 
 include(ECMSetupVersion)
-ecm_setup_version(${KF5_VERSION} VARIABLE_PREFIX kf5designerplugin
+ecm_setup_version(PROJECT VARIABLE_PREFIX kf5designerplugin
                                  VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kf5designerplugin_version.h"
                                  PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5DesignerPluginConfigVersion.cmake"
                                  SOVERSION 5)
