@@ -93,9 +93,9 @@ private Q_SLOTS:
         QCOMPARE(wiface->domXml(), domxml);
 
         QVERIFY(!wiface->isInitialized());
-        wiface->initialize(0);
+        wiface->initialize(nullptr);
 
-        QWidget *widget = wiface->createWidget(0);
+        QWidget *widget = wiface->createWidget(nullptr);
         QVERIFY(widget);
         QCOMPARE(widget->metaObject()->className(),
                  name.toLatin1().constData());

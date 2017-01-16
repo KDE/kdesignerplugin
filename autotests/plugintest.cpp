@@ -137,16 +137,16 @@ private Q_SLOTS:
         QCOMPARE(wiface->domXml(), domxml);
 
         QVERIFY(!wiface->isInitialized());
-        wiface->initialize(0);
+        wiface->initialize(nullptr);
         QVERIFY(wiface->isInitialized());
-        wiface->initialize(0);
+        wiface->initialize(nullptr);
         if (inittoggles) {
             QVERIFY(!wiface->isInitialized());
         } else {
             QVERIFY(wiface->isInitialized());
         }
 
-        QWidget *widget = wiface->createWidget(0);
+        QWidget *widget = wiface->createWidget(nullptr);
         QVERIFY(widget);
         QCOMPARE(widget->metaObject()->className(),
                  implclass.toLatin1().constData());
@@ -157,7 +157,7 @@ private Q_SLOTS:
         QVERIFY(m_widgets.count() > 1);
         QDesignerCustomWidgetInterface *wiface = m_widgets.at(1);
         QVERIFY(wiface);
-        QGroupBox *box = qobject_cast<QGroupBox*>(wiface->createWidget(0));
+        QGroupBox *box = qobject_cast<QGroupBox*>(wiface->createWidget(nullptr));
         QVERIFY(box);
         QCOMPARE(box->title(), QString("the title"));
     }
@@ -167,7 +167,7 @@ private Q_SLOTS:
         QVERIFY(m_widgets.count() > 2);
         QDesignerCustomWidgetInterface *wiface = m_widgets.at(2);
         QVERIFY(wiface);
-        QVERIFY(!wiface->createWidget(0));
+        QVERIFY(!wiface->createWidget(nullptr));
         QWidget widget;
         QCOMPARE(wiface->createWidget(&widget), &widget);
     }

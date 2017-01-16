@@ -104,7 +104,7 @@ int main(int argc, char **argv)
             KAboutLicense::GPL,
             QCoreApplication::translate("kgendesignerplugin about data", "(C) 2004-2005 Ian Reinhart Geiser"),
             QString(),
-            0,
+            nullptr,
             "geiseri@kde.org");
     about.addAuthor(QCoreApplication::translate("kgendesignerplugin about data", "Ian Reinhart Geiser"), QString(), "geiseri@kde.org");
     about.addAuthor(QCoreApplication::translate("kgendesignerplugin about data", "Daniel Molkentin"), QString(), "molkentin@kde.org");
