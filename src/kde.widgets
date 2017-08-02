@@ -199,6 +199,12 @@ WhatsThis=Page widget with many layouts (faces).
 Group=Views (KDE)
 
 # KWidgetsAddons
+[KPasswordLineEdit]
+ToolTip=A Password LineEdit (KDE)
+WhatsThis=A Custom LineEdit which allows to show password
+Group=Input (KDE)
+
+# KWidgetsAddons
 [KPixmapRegionSelectorWidget]
 IncludeFile=kpixmapregionselectorwidget.h
 ToolTip=Pixmap Region Selector (KDE)
