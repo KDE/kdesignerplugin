@@ -1,0 +1,66 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2016-11-19 20:11+0100\n"
+"PO-Revision-Date: 2017-07-13 11:17-0400\n"
+"Last-Translator: guoyunhebrave <guoyunhebrave@gmail.com>\n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/frameworks/baloo_file5.pot\n"
+
+#: kgendesignerplugin.cpp:88
+msgctxt "main|"
+msgid "Builds Qt widget plugins from an ini style description file."
+msgstr "从 INI 样式的描述文件中创建 Qt 部件插件。"
+
+#: kgendesignerplugin.cpp:95
+msgctxt "main|"
+msgid "Input file."
+msgstr "输入文件."
+
+#: kgendesignerplugin.cpp:96
+msgctxt "main|"
+msgid "Output file."
+msgstr "输出文件."
+
+#: kgendesignerplugin.cpp:97
+msgctxt "main|"
+msgid ""
+"Name of the plugin class to generate (deprecated, use PluginName in the "
+"input file)."
+msgstr "要生成的插件类的名称(过时，请在输入文件中使用 PluginName)."
+
+#: kgendesignerplugin.cpp:98
+msgctxt "main|"
+msgid ""
+"Default widget group name to display in designer (deprecated, use "
+"DefaultGroup in the input file)."
+msgstr "要在设计器里显示的默认部件组名(过时，请在输入文件中使用 DefaultGroup)."
+
+#: kgendesignerplugin.cpp:101
+msgctxt "kgendesignerplugin about data|"
+msgid "kgendesignerplugin"
+msgstr "kgendesignerplugin"
+
+#: kgendesignerplugin.cpp:105
+msgctxt "kgendesignerplugin about data|"
+msgid "(C) 2004-2005 Ian Reinhart Geiser"
+msgstr "(C) 2004-2005 Ian Reinhart Geiser"
+
+#: kgendesignerplugin.cpp:109
+msgctxt "kgendesignerplugin about data|"
+msgid "Ian Reinhart Geiser"
+msgstr "Ian Reinhart Geiser"
+
+#: kgendesignerplugin.cpp:110
+msgctxt "kgendesignerplugin about data|"
+msgid "Daniel Molkentin"
+msgstr "Daniel Molkentin"
