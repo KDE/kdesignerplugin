@@ -12,14 +12,12 @@ Group=Views (KF5)
 IncludeFile=kmessagewidget.h
 ToolTip=Display an information or error message in an animated bubble.
 Group=Display (KF5)
-ConstructorArgs=(parent)
 
 # KWidgetsAddons
 [KAnimatedButton]
 IncludeFile=kanimatedbutton.h
 ToolTip=An extended version of QToolButton which can display an animated icon.
 Group=Display (KF5)
-ConstructorArgs=(parent)
 
 # KWidgetsAddons
 [KCapacityBar]
@@ -39,7 +37,7 @@ Group=Views (KF5)
 ToolTip=Character Selection Widget (KF5)
 WhatsThis=A widget that allows selection a character out ot a table
 Group=Graphics (KF5)
-ConstructorArgs=(parent, 0)
+ConstructorArgs=(parent)
 
 # KWidgetsAddons
 [KCollapsibleGroupBox]
@@ -171,7 +169,7 @@ Group=Input (KF5)
 [KListWidgetSearchLine]
 ToolTip=QListWidget Search Line (KF5)
 Group=Input (KF5)
-ConstructorArgs=(parent, 0)
+ConstructorArgs=(parent)
 
 # KWidgetsAddons
 [KMultiTabBar]
@@ -296,14 +294,12 @@ Group=Display (KF5)
 [KTreeWidgetSearchLine]
 ToolTip=QTreeWidget Search Line (KF5)
 Group=Input (KF5)
-ConstructorArgs=(parent, 0)
 
 # KItemViews
 [KTreeWidgetSearchLineWidget]
 ToolTip=QTreeWidget Search Line Widget (KF5)
 IncludeFile=ktreewidgetsearchlinewidget.h
 Group=Input (KF5)
-ConstructorArgs=(parent, 0)
 
 # KIOWidgets
 [KUrlComboRequester]
