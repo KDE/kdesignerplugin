@@ -86,28 +86,28 @@ int main(int argc, char **argv)
     QCoreApplication app(argc, argv);
 
     QString description = QCoreApplication::translate("main", "Builds Qt widget plugins from an ini style description file.");
-    const char version[] = "0.5";
+    const QString version = QStringLiteral("0.5");
     app.setApplicationVersion(version);
 
     QCommandLineParser parser;
     parser.addVersionOption();
     parser.addHelpOption();
-    parser.addPositionalArgument("file", QCoreApplication::translate("main",  "Input file."));
-    parser.addOption(QCommandLineOption(QStringList() << "o", QCoreApplication::translate("main", "Output file."), "file"));
-    parser.addOption(QCommandLineOption(QStringList() << "n", QCoreApplication::translate("main", "Name of the plugin class to generate (deprecated, use PluginName in the input file)."), "name", "WidgetsPlugin"));
-    parser.addOption(QCommandLineOption(QStringList() << "g", QCoreApplication::translate("main", "Default widget group name to display in designer (deprecated, use DefaultGroup in the input file)."), "group", "Custom"));
+    parser.addPositionalArgument(QStringLiteral("file"), QCoreApplication::translate("main",  "Input file."));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("o"), QCoreApplication::translate("main", "Output file."), QStringLiteral("file")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("n"), QCoreApplication::translate("main", "Name of the plugin class to generate (deprecated, use PluginName in the input file)."), QStringLiteral("name"), QStringLiteral("WidgetsPlugin")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("g"), QCoreApplication::translate("main", "Default widget group name to display in designer (deprecated, use DefaultGroup in the input file)."), QStringLiteral("group"), QStringLiteral("Custom")));
 
-    KAboutData about("kgendesignerplugin",
+    KAboutData about(QStringLiteral("kgendesignerplugin"),
             QCoreApplication::translate("kgendesignerplugin about data", "kgendesignerplugin"),
             version,
             description,
             KAboutLicense::GPL,
             QCoreApplication::translate("kgendesignerplugin about data", "(C) 2004-2005 Ian Reinhart Geiser"),
             QString(),
-            nullptr,
-            "geiseri@kde.org");
-    about.addAuthor(QCoreApplication::translate("kgendesignerplugin about data", "Ian Reinhart Geiser"), QString(), "geiseri@kde.org");
-    about.addAuthor(QCoreApplication::translate("kgendesignerplugin about data", "Daniel Molkentin"), QString(), "molkentin@kde.org");
+            QString(),
+            QStringLiteral("geiseri@kde.org"));
+    about.addAuthor(QCoreApplication::translate("kgendesignerplugin about data", "Ian Reinhart Geiser"), QString(), QStringLiteral("geiseri@kde.org"));
+    about.addAuthor(QCoreApplication::translate("kgendesignerplugin about data", "Daniel Molkentin"), QString(), QStringLiteral("molkentin@kde.org"));
     about.setupCommandLine(&parser);
 
     parser.process(app);
@@ -119,19 +119,19 @@ int main(int argc, char **argv)
 
     QFileInfo fi(parser.positionalArguments().at(0));
 
-    QString outputFile = parser.value("o");
-    QString pluginName = parser.value("n");
-    QString group = parser.value("g");
+    QString outputFile = parser.value(QStringLiteral("o"));
+    QString pluginName = parser.value(QStringLiteral("n"));
+    QString group = parser.value(QStringLiteral("g"));
     QString fileName = fi.absoluteFilePath();
 
-    if (parser.isSet("o")) {
+    if (parser.isSet(QStringLiteral("o"))) {
         QFile output(outputFile);
         if (output.open(QIODevice::WriteOnly)) {
             QTextStream ts(&output);
             buildFile(ts, group, fileName, pluginName);
             QString mocFile = output.fileName();
-            mocFile.replace(".cpp", ".moc");
-            ts << QString("#include <%1>\n").arg(mocFile) << endl;
+            mocFile.replace(QStringLiteral(".cpp"), QStringLiteral(".moc"));
+            ts << QStringLiteral("#include <%1>\n").arg(mocFile) << endl;
         }
         output.close();
     } else {
@@ -149,7 +149,7 @@ void buildFile(QTextStream &ts, const QString &group, const QString &fileName, c
     QString defaultGroup = cg.readEntry("DefaultGroup", group);
     QStringList includes = cg.readEntry("Includes", QStringList());
     QStringList classes = input.groupList();
-    classes.removeAll("Global");
+    classes.removeAll(QStringLiteral("Global"));
 
     foreach (const QString &myInclude, classes) {
         includes += buildWidgetInclude(myInclude, input);
@@ -173,7 +173,7 @@ void buildFile(QTextStream &ts, const QString &group, const QString &fileName, c
 QString denamespace(const QString &str)
 {
     QString denamespaced = str;
-    denamespaced.remove("::");
+    denamespaced.remove(QStringLiteral("::"));
     return denamespaced;
 }
 
@@ -183,17 +183,17 @@ QString buildCollClass(KConfig &_input, const QStringList &classes, const QStrin
     QHash<QString, QString> defMap;
     const QString collName = input.readEntry("PluginName", pluginName);
     Q_ASSERT(!collName.isEmpty());
-    defMap.insert("CollName", collName);
+    defMap.insert(QStringLiteral("CollName"), collName);
     QString genCode;
 
     foreach (const QString &myClass, classes) {
-        genCode += QString("                m_plugins.append( new %1(this) );\n").arg(denamespace(myClass) + "Plugin");
+        genCode += QStringLiteral("                m_plugins.append( new %1(this) );\n").arg(denamespace(myClass) + QStringLiteral("Plugin"));
     }
 
-    defMap.insert("CollectionAdd", genCode);
+    defMap.insert(QStringLiteral("CollectionAdd"), genCode);
 
-    QString str = KMacroExpander::expandMacros(collClassDef, defMap);
-    str += KMacroExpander::expandMacros(collClassImpl, defMap);
+    QString str = KMacroExpander::expandMacros(QLatin1String(collClassDef), defMap);
+    str += KMacroExpander::expandMacros(QLatin1String(collClassImpl), defMap);
     return str;
 }
 
@@ -202,14 +202,14 @@ QString buildWidgetClass(const QString &name, KConfig &_input, const QString &gr
     KConfigGroup input(&_input, name);
     QHash<QString, QString> defMap;
 
-    defMap.insert("Group", input.readEntry("Group", group).replace('\"', "\\\""));
-    defMap.insert("IncludeFile", input.readEntry("IncludeFile", QString(name.toLower() + ".h")).remove(':'));
-    defMap.insert("ToolTip", input.readEntry("ToolTip", QString(name + " Widget")).replace('\"', "\\\""));
-    defMap.insert("WhatsThis", input.readEntry("WhatsThis", QString(name + " Widget")).replace('\"', "\\\""));
-    defMap.insert("IsContainer", input.readEntry("IsContainer", "false"));
-    defMap.insert("IconName", input.readEntry("IconName", QString::fromLatin1(":/pics/%1.png").arg(denamespace(name).toLower())));
-    defMap.insert("Class", name);
-    defMap.insert("PluginName", denamespace(name) + QLatin1String("Plugin"));
+    defMap.insert(QStringLiteral("Group"), input.readEntry("Group", group).replace(QLatin1Char('\"'), QStringLiteral("\\\"")));
+    defMap.insert(QStringLiteral("IncludeFile"), input.readEntry("IncludeFile", QString(name.toLower() + QStringLiteral(".h"))).remove(QLatin1Char(':')));
+    defMap.insert(QStringLiteral("ToolTip"), input.readEntry("ToolTip", QString(name + QStringLiteral(" Widget"))).replace(QLatin1Char('\"'), QStringLiteral("\\\"")));
+    defMap.insert(QStringLiteral("WhatsThis"), input.readEntry("WhatsThis", QString(name + QStringLiteral(" Widget"))).replace(QLatin1Char('\"'), QStringLiteral("\\\"")));
+    defMap.insert(QStringLiteral("IsContainer"), input.readEntry("IsContainer", QStringLiteral("false")));
+    defMap.insert(QStringLiteral("IconName"), input.readEntry("IconName", QString::fromLatin1(":/pics/%1.png").arg(denamespace(name).toLower())));
+    defMap.insert(QStringLiteral("Class"), name);
+    defMap.insert(QStringLiteral("PluginName"), denamespace(name) + QLatin1String("Plugin"));
 
     // FIXME: ### make this more useful, i.e. outsource to separate file
     QString domXml = input.readEntry("DomXML", QString());
@@ -217,21 +217,21 @@ QString buildWidgetClass(const QString &name, KConfig &_input, const QString &gr
     if (domXml.isEmpty()) {
         domXml = QStringLiteral("QDesignerCustomWidgetInterface::domXml()");
     } else {
-        domXml = QStringLiteral("QStringLiteral(\"%1\")").arg(domXml.replace('\"', "\\\""));
+        domXml = QStringLiteral("QStringLiteral(\"%1\")").arg(domXml.replace(QLatin1Char('\"'), QStringLiteral("\\\"")));
     }
-    defMap.insert("DomXml", domXml);
-    defMap.insert("CodeTemplate", input.readEntry("CodeTemplate"));
-    defMap.insert("CreateWidget", input.readEntry("CreateWidget",
-                  QString("\n            return new %1%2;")
+    defMap.insert(QStringLiteral("DomXml"), domXml);
+    defMap.insert(QStringLiteral("CodeTemplate"), input.readEntry("CodeTemplate"));
+    defMap.insert(QStringLiteral("CreateWidget"), input.readEntry("CreateWidget",
+                  QStringLiteral("\n            return new %1%2;")
                   .arg(input.readEntry("ImplClass", name))
                   .arg(input.readEntry("ConstructorArgs", "( parent )"))));
-    defMap.insert("Initialize", input.readEntry("Initialize", "\n            Q_UNUSED(core);\n            if (mInitialized) return;\n            mInitialized=true;"));
+    defMap.insert(QStringLiteral("Initialize"), input.readEntry("Initialize", "\n            Q_UNUSED(core);\n            if (mInitialized) return;\n            mInitialized=true;"));
 
-    return KMacroExpander::expandMacros(classDef, defMap);
+    return KMacroExpander::expandMacros(QLatin1String(classDef), defMap);
 }
 
 QString buildWidgetInclude(const QString &name, KConfig &_input)
 {
     KConfigGroup input(&_input, name);
-    return input.readEntry("IncludeFile", QString(name.toLower() + ".h"));
+    return input.readEntry("IncludeFile", QString(name.toLower() + QStringLiteral(".h")));
 }

@@ -270,7 +270,7 @@ Group=Buttons (KF5)
 [KSqueezedTextLabel]
 ToolTip=A QLabel that squeezes its text (KF5)
 WhatsThis=If the text is too long to fit into the label it is divided into remaining left and right parts which are separated by three dots
-ConstructorArgs=("KSqueezedTextLabel", parent)
+ConstructorArgs=(QStringLiteral("KSqueezedTextLabel"), parent)
 Group=Display (KF5)
 
 # KTextWidgets
@@ -311,7 +311,7 @@ Group=Input (KF5)
 # KWidgetsAddons
 [KUrlLabel]
 ToolTip=URL Label (KF5)
-ConstructorArgs=("KUrlLabel", QString(), parent)
+ConstructorArgs=(QStringLiteral("KUrlLabel"), QString(), parent)
 Group=Display (KF5)
 
 # KIOWidgets
