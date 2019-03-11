@@ -86,7 +86,7 @@ if(Qt5Designer_FOUND AND KF5WebKit_FOUND)
 endif()
 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5DesignerPlugin")
-
+add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050d00)
 if (KF5DocTools_FOUND)
     add_subdirectory(docs)
 endif()
