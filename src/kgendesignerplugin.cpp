@@ -227,7 +227,8 @@ QString buildWidgetClass(const QString &name, KConfig &_input, const QString &gr
                   .arg(input.readEntry("ConstructorArgs", "( parent )"))));
     defMap.insert(QStringLiteral("Initialize"), input.readEntry("Initialize", "\n            Q_UNUSED(core);\n            if (mInitialized) return;\n            mInitialized=true;"));
 
-    return KMacroExpander::expandMacros(QLatin1String(classDef), defMap);
+    QString code = KMacroExpander::expandMacros(QLatin1String(classDef), defMap);
+    return code.replace(QLatin1String("QStringLiteral(\"\")"), QLatin1String("QString()"));
 }
 
 QString buildWidgetInclude(const QString &name, KConfig &_input)
