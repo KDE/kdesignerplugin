@@ -20,6 +20,13 @@ ToolTip=An extended version of QToolButton which can display an animated icon.
 Group=Display (KF5)
 
 # KWidgetsAddons
+[KBusyIndicatorWidget]
+IncludeFile=kbusyindicatorwidget.h
+ToolTip=Busy Indicator (KF5)
+ConstructorArgs=(parent)
+Group=Display (KF5)
+
+# KWidgetsAddons
 [KCapacityBar]
 IncludeFile=kcapacitybar.h
 ToolTip=Capacity Bar (KF5)

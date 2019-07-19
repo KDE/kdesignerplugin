@@ -2,6 +2,7 @@
 ########### install files ###############
 
 install( FILES
+ kbusyindicatorwidget.png
  klineedit.png
  kpasswordedit.png
  kfontrequester.png
