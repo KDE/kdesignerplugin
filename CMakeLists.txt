@@ -71,18 +71,10 @@ find_package(KF5Sonnet ${KF5_DEP_VERSION})
 set_package_properties(KF5Sonnet PROPERTIES TYPE OPTIONAL
    PURPOSE "Required to build the Qt Designer plugin for KDE Frameworks widgets")
 
-find_package(KF5WebKit ${KF5_DEP_VERSION})
-set_package_properties(KF5WebKit PROPERTIES TYPE OPTIONAL
-   PURPOSE "Required to build the Qt Designer plugin for the KDEWebKit widgets")
-
 if(Qt5Designer_FOUND AND KF5Completion_FOUND AND KF5ConfigWidgets_FOUND AND
   KF5IconThemes_FOUND AND KF5KIO_FOUND AND KF5ItemViews_FOUND AND KF5Plotting_FOUND
   AND KF5TextWidgets_FOUND AND KF5WidgetsAddons_FOUND AND KF5XmlGui_FOUND AND KF5Sonnet_FOUND)
     set(BUILD_KF5_DESIGNER_PLUGIN TRUE)
-endif()
-
-if(Qt5Designer_FOUND AND KF5WebKit_FOUND)
-  set(BUILD_KDEWEBKIT_DESIGNER_PLUGIN TRUE)
 endif()
 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5DesignerPlugin")
