@@ -1,5 +1,5 @@
 maintainer: alexmerry
-description: Integration of Frameworks widgets in Qt Designer/Creator
+description: Tool to generate custom widget plugins for Qt Designer/Creator
 tier: 3
 type: functional
 platforms:
@@ -7,11 +7,11 @@ platforms:
     - name: FreeBSD
     - name: Windows
     - name: MacOSX
-portingAid: false
-deprecated: false
+portingAid: true
+deprecated: true
 release: true
 cmakename: KF5DesignerPlugin
 
 public_lib: true
 group: Frameworks
-subgroup: Tier 3
+subgroup: Porting Aids

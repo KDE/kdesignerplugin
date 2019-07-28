@@ -1,13 +1,13 @@
 # KDesignerPlugin
 
-Integrating KDE frameworks widgets with Qt Designer
+Integrating custom widgets with Qt Designer
+
+This tool is deprecated. In your CMake-based build system use [ECMAddQtDesignerPlugin](https://api.kde.org/ecm/module/ECMAddQtDesignerPlugin.html) from "Extra CMake Modules" instead.
 
 ## Introduction
 
-This framework provides plugins for Qt Designer that allow it to display
-the widgets provided by various KDE frameworks, as well as a utility
-(kgendesignerplugin) that can be used to generate other such plugins
-from ini-style description files.
+This framework provides a utility (kgendesignerplugin) that can be used to
+generate plugins for Qt Designer from ini-style description files.
 
 ## kgendesignerplugin
 
