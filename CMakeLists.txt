@@ -34,6 +34,7 @@ find_package(KF5DocTools ${KF5_DEP_VERSION})
 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5DesignerPlugin")
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050d00)
+add_definitions(-DQT_DEPRECATED_WARNINGS_SINCE=0x060000)
 if (KF5DocTools_FOUND)
     add_subdirectory(docs)
 endif()
