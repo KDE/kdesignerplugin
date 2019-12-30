@@ -131,7 +131,7 @@ int main(int argc, char **argv)
             buildFile(ts, group, fileName, pluginName);
             QString mocFile = output.fileName();
             mocFile.replace(QStringLiteral(".cpp"), QStringLiteral(".moc"));
-            ts << QStringLiteral("#include <%1>\n").arg(mocFile) << endl;
+            ts << QStringLiteral("#include <%1>\n").arg(mocFile) << '\n';
         }
         output.close();
     } else {
@@ -144,7 +144,7 @@ void buildFile(QTextStream &ts, const QString &group, const QString &fileName, c
 {
     KConfig input(fileName, KConfig::NoGlobals);
     KConfigGroup cg(&input, "Global");
-    ts << classHeader << endl;
+    ts << classHeader << '\n';
 
     QString defaultGroup = cg.readEntry("DefaultGroup", group);
     QStringList includes = cg.readEntry("Includes", QStringList());
@@ -156,17 +156,18 @@ void buildFile(QTextStream &ts, const QString &group, const QString &fileName, c
     }
 
     for (const QString &myInclude : qAsConst(includes)) {
-        ts << "#include <" << myInclude << ">" << endl;
+        ts << "#include <" << myInclude << ">\n";
     }
 
     ts << QLatin1String("\n\n");
 
     // Autogenerate widget defs here
     for (const QString &myClass : qAsConst(classes)) {
-        ts << buildWidgetClass(myClass, input, defaultGroup) << endl;
+        ts << buildWidgetClass(myClass, input, defaultGroup) << "\n";
     }
 
     ts << buildCollClass(input, classes, pluginName);
+    ts.flush();
 
 }
 
