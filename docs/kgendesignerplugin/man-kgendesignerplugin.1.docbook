@@ -411,7 +411,7 @@ ImplClass=FancyWidgetPreview
   <variablelist>
     <varlistentry>
       <term>
-        <uri>http://qt-project.org/doc/qt-5/designer-creating-custom-widgets.html</uri>
+        <uri>https://doc.qt.io/qt-5/designer-creating-custom-widgets.html</uri>
       </term>
       <listitem>
         <para>The &Qt; Designer documentation on creating plugins for custom widgets.</para>
