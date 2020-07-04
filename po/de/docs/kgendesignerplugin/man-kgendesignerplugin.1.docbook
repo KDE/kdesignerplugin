@@ -1,0 +1,216 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % German "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Programmier-Werkzeug</title>
+
+<author
+><firstname
+>Ian</firstname
+> <othername
+>Reinhart</othername
+> <surname
+>Geiser</surname
+> <affiliation
+> <address
+> <email
+>geiseri@kde.org</email>
+</address>
+</affiliation>
+</author>
+
+<date
+>2006-06-01</date>
+<productname
+>K Desktop Environment</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle>
+<command
+>kgendesignerplugin</command>
+</refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+>kgendesignerplugin</refname>
+<refpurpose
+>Erstellt Hilfsprogramme (Module) für &Qt;-Bedienelemente (Widgets) aus einer Beschreibungsdatei im „ini“-Stil. </refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>kgendesignerplugin</command
+> <arg
+>&Qt;-Optionen</arg
+> <arg
+>&kde;-Optionen</arg
+> <arg choice="plain"
+><replaceable
+>Datei</replaceable
+></arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Beschreibung</title>
+<para
+><command
+>kgendesignerplugin</command
+> erstellt Hilfsprogramme (Module) für &Qt;-Bedienelemente (Widgets) aus einer Beschreibungsdatei im „ini“-Stil. </para>
+</refsect1>
+
+<refsect1>
+<title
+>Optionen</title>
+
+<para>
+<variablelist>
+<title
+><emphasis role="bold"
+>Argumente:</emphasis
+></title>
+<varlistentry>
+<term>
+<replaceable
+>Datei</replaceable>
+</term>
+<listitem>
+<para
+>Eingabedatei</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+<para>
+<variablelist>
+<title
+><emphasis role="bold"
+>Optionen</emphasis
+></title>
+<varlistentry>
+<term>
+<option
+>-o &lt;Datei&gt;</option>
+</term>
+<listitem>
+<para
+>Ausgabedatei</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>
+<option
+>-n &lt;Modulname&gt;</option>
+</term>
+<listitem>
+<para
+>Name der Modul-Klasse, die erstellt werden soll, veraltet. Verwenden Sie PluginName in der Eingabedatei [WidgetsPlugin]</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>
+<option
+>-g &lt;Gruppe&gt;</option>
+</term>
+<listitem>
+<para
+>Standardname der Bedienelement-Gruppe , veraltet. Verwenden Sie DefaultGroup in der Eingabedatei im Designer [Custom]</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+<para>
+<variablelist>
+<title
+><emphasis role="bold"
+>Allgemeine Optionen:</emphasis
+></title>
+
+<varlistentry>
+<term>
+<option
+>--help</option>
+</term>
+<listitem>
+<para
+>Hilfe zu verfügbaren Optionen anzeigen.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--author</option>
+</term>
+<listitem>
+<para
+>Zeigt Informationen über den Autor.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>-v, --version</option>
+</term>
+<listitem>
+<para
+>Versionsinformation anzeigen</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--license</option>
+</term>
+<listitem>
+<para
+>Lizenz-Informationen anzeigen</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Siehe auch</title>
+<variablelist>
+<varlistentry>
+<term>
+<option
+>http://developer.kde.org</option>
+</term>
+<listitem>
+<para
+>&kde;-Entwickler-Webseite</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</refsect1>
+
+<refsect1>
+<title
+>Fehler</title>
+<para
+>Bitte verwenden Sie <ulink url="http://bugs.kde.org"
+>bugs.kde.org</ulink
+> für Fehlerberichte, schicken Sie keine E-Mails direkt an die Autoren.</para>
+</refsect1>
+
+</refentry>
