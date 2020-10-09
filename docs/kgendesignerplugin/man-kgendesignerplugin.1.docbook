@@ -7,7 +7,7 @@
 <refentry lang="&language;">
 
 <refentryinfo>
-  <title>&kde; Frameworks: KDesignerPlugin</title>
+  <title>&kde-frameworks;: KDesignerPlugin</title>
   <author>
     <firstname>Richard</firstname>
     <surname>Johnson</surname>
@@ -19,7 +19,7 @@
   <author>
     <firstname>Alex</firstname>
     <surname>Merry</surname>
-    <contrib>Updated the documentation for &kde; Frameworks 5.</contrib>
+    <contrib>Updated the documentation for &kf5-full;.</contrib>
     <affiliation>
       <address><email>alexmerry@kde.org</email></address>
     </affiliation>
@@ -229,7 +229,7 @@
         <term><varname>DomXML</varname></term>
         <listitem>
           <para>
-            An XML UI description of the widget (default: the default provided
+            An &XML; UI description of the widget (default: the default provided
             by the &Qt; Designer plugin headers).
           </para>
         </listitem>
@@ -326,7 +326,7 @@
 <refsect1>
   <title>Examples</title>
   <para>
-    The simplest description file might look like
+    The simplest description file might look like:
     <screen language="ini">
 <![CDATA[
 [Foo]
@@ -425,7 +425,7 @@ ImplClass=FancyWidgetPreview
 <refsect1>
   <title>Bugs</title>
   <para>
-    Please use <ulink url="http://bugs.kde.org">bugs.kde.org</ulink> to report
+    Please use <ulink url="https://bugs.kde.org">&kde;'s bugtracker</ulink> to report
     bugs, do not mail the authors directly.
   </para>
 </refsect1>
