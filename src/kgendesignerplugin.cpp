@@ -151,18 +151,18 @@ void buildFile(QTextStream &ts, const QString &group, const QString &fileName, c
     QStringList classes = input.groupList();
     classes.removeAll(QStringLiteral("Global"));
 
-    for (const QString &myInclude : qAsConst(classes)) {
+    for (const QString &myInclude : std::as_const(classes)) {
         includes += buildWidgetInclude(myInclude, input);
     }
 
-    for (const QString &myInclude : qAsConst(includes)) {
+    for (const QString &myInclude : std::as_const(includes)) {
         ts << "#include <" << myInclude << ">\n";
     }
 
     ts << QLatin1String("\n\n");
 
     // Autogenerate widget defs here
-    for (const QString &myClass : qAsConst(classes)) {
+    for (const QString &myClass : std::as_const(classes)) {
         ts << buildWidgetClass(myClass, input, defaultGroup) << "\n";
     }
 
