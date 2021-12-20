@@ -18,9 +18,9 @@ include(KDECMakeSettings)
 
 
 set(REQUIRED_QT_VERSION 5.15.2)
-find_package(Qt5Core ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
-find_package(Qt5Designer ${REQUIRED_QT_VERSION} NO_MODULE)
-set_package_properties(Qt5Designer PROPERTIES
+find_package(Qt${QT_MAJOR_VERSION}Core ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
+find_package(Qt${QT_MAJOR_VERSION}Designer ${REQUIRED_QT_VERSION} NO_MODULE)
+set_package_properties(Qt${QT_MAJOR_VERSION}Designer PROPERTIES
    PURPOSE "Required to build the Qt Designer plugins"
    TYPE OPTIONAL
 )

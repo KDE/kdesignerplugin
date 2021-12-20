@@ -8,7 +8,7 @@
 # Usage:
 #
 #   set(foo_SRCS otherfile.cpp)
-#   qt5_add_resources(foo_SRCS widgeticons.qrc)
+#   qt_add_resources(foo_SRCS widgeticons.qrc)
 #   kf5designerplugin_generate_plugin(foo_SRCS foo.widgets)
 #   add_library(foowidgets MODULE ${foo_SRCS})
 #
@@ -59,7 +59,7 @@ function(kf5designerplugin_generate_plugin outvar widgetfile)
 
     # create moc file
     set(moc ${CMAKE_CURRENT_BINARY_DIR}/${basename}widgets.moc)
-    qt5_generate_moc(${source} ${moc} ${ARGN})
+    qt_generate_moc(${source} ${moc} ${ARGN})
 
     set(${outvar} ${${outvar}} "${source}" "${moc}" PARENT_SCOPE)
 endfunction()
@@ -73,7 +73,7 @@ macro(kf5designerplugin_add_plugin target)
         if(f MATCHES "\\.widgets$")
             kf5designerplugin_generate_plugin(_files "${f}" TARGET "${target}")
         elseif(f MATCHES "\\.qrc$")
-            qt5_add_resources(_files "${f}")
+            qt_add_resources(_files "${f}")
         elseif(f MATCHES "OPTIONAL")
             set(_requiredarg)
         else()
@@ -81,23 +81,23 @@ macro(kf5designerplugin_add_plugin target)
         endif()
     endforeach()
 
-    if(NOT Qt5Designer_FOUND)
-        find_package(Qt5Designer ${REQUIRED_QT_VERSION} ${_requiredarg} NO_MODULE)
-        set_package_properties(Qt5Designer PROPERTIES
+    if(NOT TARGET Qt${QT_MAJOR_VERSION}::Designer)
+        find_package(Qt${QT_MAJOR_VERSION}Designer ${REQUIRED_QT_VERSION} ${_requiredarg} NO_MODULE)
+        set_package_properties(Qt${QT_MAJOR_VERSION}Designer PROPERTIES
             PURPOSE "Required to build Qt Designer plugins"
         )
     endif()
     if(NOT Qt5Designer_VERSION_STRING VERSION_LESS 5.5.0 AND NOT Qt5UiPlugin_FOUND AND NOT CMAKE_VERSION VERSION_LESS 3.0.0)
-        find_package(Qt5UiPlugin ${REQUIRED_QT_VERSION} ${_requiredarg} NO_MODULE)
-        set_package_properties(Qt5UiPlugin PROPERTIES
+        find_package(Qt${QT_MAJOR_VERSION}UiPlugin ${REQUIRED_QT_VERSION} ${_requiredarg} NO_MODULE)
+        set_package_properties(Qt${QT_MAJOR_VERSION}UiPlugin PROPERTIES
             PURPOSE "Required to build Qt Designer plugins"
         )
     endif()
-    if (Qt5UiPlugin_FOUND)
+    if (TARGET Qt${QT_MAJOR_VERSION}::UiPlugin)
         # for some reason, Qt5UiPlugin does not set its _INCLUDE_DIRS variable. Fill it manually
-        get_target_property(Qt5UiPlugin_INCLUDE_DIRS Qt5::UiPlugin INTERFACE_INCLUDE_DIRECTORIES)
+        get_target_property(Qt${QT_MAJOR_VERSION}UiPlugin_INCLUDE_DIRS Qt${QT_MAJOR_VERSION}::UiPlugin INTERFACE_INCLUDE_DIRECTORIES)
     endif()
-    if(Qt5Designer_FOUND)
+    if(TARGET Qt${QT_MAJOR_VERSION}::Designer)
         add_library(${target} MODULE ${_files})
         target_include_directories(${target}
              PRIVATE ${Qt5UiPlugin_INCLUDE_DIRS}
