@@ -88,9 +88,9 @@
   <title
 >Descripció</title>
   <para
->Els connectors de giny personalitzats per a &Qt; Designer solen seguir un patró estàndard, i les classes proporcionades pel connector proporcionen principalment informació estàtica, juntament amb la funció de crear una instància que normalment només és una crida de constructor simple. <command
+>Els connectors de giny personalitzats per a &Qt; Designer solen seguir un patró estàndard, i les classes proporcionades pel connector proporcionen principalment informació estàtica, juntament amb la funció de crear una instància que normalment només és una crida de constructor senzill. <command
 >kgendesignerplugin</command
-> permet als desenvolupadors de biblioteques que proporcionen ginys nous, el fet de crear un connector d'este tipus sense necessitat de crear tot el codi repetitiu associat, proporcionant un simple fitxer de descripció d'estil ini. </para>
+> permet als desenvolupadors de biblioteques que proporcionen ginys nous, el fet de crear un connector d'este tipus sense necessitat de crear tot el codi repetitiu associat, proporcionant un senzill fitxer de descripció d'estil ini. </para>
 
   <para
 ><command
@@ -369,11 +369,11 @@
           <para
 >La capçalera que s'ha d'incloure per a utilitzar-la amb este giny (predeterminat: la versió en minúscules del nom de la secció, eliminant qualsevol caràcter de dos punts i annexant «*.h». Per exemple, <literal
 >foo.h</literal
-> a la secció <literal
+> en la secció <literal
 >[Foo]</literal
 >, o <literal
 >foobar.h</literal
-> a la secció <literal
+> en la secció <literal
 >[Foo::Bar]</literal
 >). </para>
         </listitem>
@@ -397,9 +397,9 @@
 ></term>
         <listitem>
           <para
->El consell d'eina que es mostrarà quan es passe per damunt del giny a la llista de ginys de &Qt; Designer (predeterminat: el nom de la secció, amb «Widget» annexat. Per exemple, <literal
+>El consell d'eina que es mostrarà quan es passe per damunt del giny en la llista de ginys de &Qt; Designer (predeterminat: el nom de la secció, amb «Widget» annexat. Per exemple, <literal
 >Foo Widget</literal
-> a la secció <literal
+> en la secció <literal
 >[Foo]</literal
 >). </para>
         </listitem>
@@ -413,7 +413,7 @@
           <para
 >El text de «Què és açò» associat amb el giny a &Qt; Designer (predeterminat: el nom de la secció, amb «Widget» annexat. Per exemple, <literal
 >Foo Widget</literal
-> a la secció <literal
+> en la secció <literal
 >[Foo]</literal
 >). </para>
         </listitem>
