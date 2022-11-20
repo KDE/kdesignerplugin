@@ -43,7 +43,7 @@ ecm_set_disabled_deprecation_versions(
 if (KF5DocTools_FOUND)
     add_subdirectory(docs)
 endif()
-ecm_install_po_files_as_qm(po)
+ecm_install_po_files_as_qm(poqm)
 if (KF5DocTools_FOUND)
     kdoctools_install(po)
 endif()
