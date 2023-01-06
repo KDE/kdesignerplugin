@@ -18,20 +18,21 @@
 # Sebastien Renard <renard@kde.org>, 2013, 2014.
 # Vincent Pinon <vpinon@kde.org>, 2017.
 # Xavier Besnard <xavier.besnard@neuf.fr>, 2021.
+# Xavier BESNARD <xavier.besnard]neuf.fr>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2021-01-11 18:12+0100\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"PO-Revision-Date: 2023-01-05 15:40+0100\n"
+"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.0\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: qtrich\n"
@@ -70,8 +71,8 @@ msgid ""
 "DefaultGroup in the input file)."
 msgstr ""
 "Nom de groupe de composants graphiques par défaut à afficher dans le "
-"concepteur (déconseillé, il faut utiliser DefaultGroup dans le fichier "
-"d'entrée)"
+"concepteur (déconseillé, il faut utiliser l'objet « DefaultGroup » dans le "
+"fichier d'entrée)"
 
 #: kgendesignerplugin.cpp:101
 msgctxt "kgendesignerplugin about data|"
@@ -81,7 +82,7 @@ msgstr "kgendesignerplugin"
 #: kgendesignerplugin.cpp:105
 msgctxt "kgendesignerplugin about data|"
 msgid "(C) 2004-2005 Ian Reinhart Geiser"
-msgstr "(C) 2004-2005 Ian Reinhart Geiser"
+msgstr "(C) 2004 - 2005 Ian Reinhart Geiser"
 
 #: kgendesignerplugin.cpp:109
 msgctxt "kgendesignerplugin about data|"
