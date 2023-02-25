@@ -8,7 +8,7 @@
 
 <refentryinfo>
   <title
->&kde; Frameworks: KDesignerPlugin</title>
+>&kde-frameworks;: KDesignerPlugin</title>
   <author
 ><firstname
 >Richard</firstname
@@ -29,7 +29,7 @@
 > <surname
 >Merry</surname
 > <contrib
->Atualizou a documentação para o &kde; Frameworks 5.</contrib>
+>Atualizou a documentação para o &kf5-full;.</contrib>
     <affiliation>
       <address
 ><email
@@ -309,7 +309,7 @@
 ></term>
         <listitem>
           <para
->Uma descrição da interface gráfica em XML do widget (padrão: o valor fornecido pelos arquivos de cabeçalho do plugin do &Qt; Designer). </para>
+>Uma descrição da interface gráfica em &XML; do widget (padrão: o valor fornecido pelos arquivos de cabeçalho do plugin do &Qt; Designer). </para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -428,7 +428,7 @@
   <title
 >Exemplos</title>
   <para
->O arquivo de descrição mais simples poderá ser algo do tipo <screen language="ini">
+>O arquivo de descrição mais simples poderá ser algo do tipo: <screen language="ini">
 <![CDATA[
 [Foo]
 ToolTip=Displays foos
@@ -507,7 +507,7 @@ ImplClass=WidgetBonitoVisualização
     <varlistentry>
       <term>
         <uri
->http://qt-project.org/doc/qt-5/designer-creating-custom-widgets.html</uri>
+>https://doc.qt.io/qt-5/designer-creating-custom-widgets.html</uri>
       </term>
       <listitem>
         <para
@@ -523,8 +523,8 @@ ImplClass=WidgetBonitoVisualização
   <title
 >Problemas</title>
   <para
->Use por favor o <ulink url="http://bugs.kde.org"
->bugs.kde.org</ulink
+>Use por favor o <ulink url="https://bugs.kde.org"
+>rastreador de erros do &kde;</ulink
 > para reportar erros; não os envie diretamente para os autores por e-mail. </para>
 </refsect1>
 
