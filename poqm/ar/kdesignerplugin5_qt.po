@@ -50,7 +50,7 @@ msgstr ""
 #: kgendesignerplugin.cpp:101
 msgctxt "kgendesignerplugin about data|"
 msgid "kgendesignerplugin"
-msgstr "ملحقة كدي التوليدية لِ‍«كيوت المصمّم»/kgendesignerplugin"
+msgstr "ملحقة كِيدِي التوليدية لِ‍«كيوت المصمّم»/kgendesignerplugin"
 
 #: kgendesignerplugin.cpp:105
 msgctxt "kgendesignerplugin about data|"
