@@ -55,7 +55,7 @@ msgstr "ملحقة كِيدِي التوليدية لِ‍«كيوت المصم�
 #: kgendesignerplugin.cpp:105
 msgctxt "kgendesignerplugin about data|"
 msgid "(C) 2004-2005 Ian Reinhart Geiser"
-msgstr "‏© ٢٠٠٤-٢٠٠٥ Ian Reinhart Geiser"
+msgstr "‏© 2004-2005 Ian Reinhart Geiser"
 
 #: kgendesignerplugin.cpp:109
 msgctxt "kgendesignerplugin about data|"
