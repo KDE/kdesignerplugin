@@ -56,7 +56,7 @@ msgid ""
 "Default widget group name to display in designer (deprecated, use "
 "DefaultGroup in the input file)."
 msgstr ""
-"Nome predeterminado do grupo de trebellos que se mostran no Designer "
+"Nome predeterminado do grupo de trebellos que se amosan no Designer "
 "(obsoleto, use DefaultGroup no ficheiro de entrada)."
 
 #: kgendesignerplugin.cpp:101
