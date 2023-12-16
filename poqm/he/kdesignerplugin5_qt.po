@@ -19,70 +19,67 @@
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-05-16 06:49-0400\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2023-12-15 22:00+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.4.1\n"
 "X-Qt-Contexts: true\n"
 
 #: kgendesignerplugin.cpp:88
-#, fuzzy
 msgctxt "main|"
 msgid "Builds Qt widget plugins from an ini style description file."
-msgstr "בניית תוספי פריטים גרפיים של Qt מתוך קובץ תיאור סגנון בתבנית ini."
+msgstr "בניית תוספי פריטים גרפיים של Qt מתוך קובץ תיאור בסגנון ini."
 
 #: kgendesignerplugin.cpp:95
-#, fuzzy
 msgctxt "main|"
 msgid "Input file."
-msgstr "קובץ קלט"
+msgstr "קובץ קלט."
 
 #: kgendesignerplugin.cpp:96
-#, fuzzy
 msgctxt "main|"
 msgid "Output file."
-msgstr "קובץ פלט"
+msgstr "קובץ פלט."
 
 #: kgendesignerplugin.cpp:97
-#, fuzzy
 msgctxt "main|"
 msgid ""
 "Name of the plugin class to generate (deprecated, use PluginName in the "
 "input file)."
-msgstr "שם מחלקת התוספים ליצירה"
+msgstr ""
+"שם מחלקת התוספים ליצירה (השימוש הופסק, יש להשתמש ב־PluginName בקובץ הקלט)."
 
 #: kgendesignerplugin.cpp:98
-#, fuzzy
 msgctxt "main|"
 msgid ""
 "Default widget group name to display in designer (deprecated, use "
 "DefaultGroup in the input file)."
-msgstr "שם המשמש כברירת מחדל להצגת קבוצת הפריטים הגרפיים ב־Designer"
+msgstr ""
+"שם קבוצת הפקדים כברירת מחדל להצגה במעצב (השימוש הופסק, יש להשתמש ב־"
+"DefaultGroup בקובץ הקלט)."
 
 #: kgendesignerplugin.cpp:101
 msgctxt "kgendesignerplugin about data|"
 msgid "kgendesignerplugin"
-msgstr ""
+msgstr "kgendesignerplugin"
 
 #: kgendesignerplugin.cpp:105
-#, fuzzy
 msgctxt "kgendesignerplugin about data|"
 msgid "(C) 2004-2005 Ian Reinhart Geiser"
-msgstr "(C) 2004-2005 Ian Reinhart Geiser"
+msgstr "(C) 2004‏-2005 איאן ריינהארט גייזר"
 
 #: kgendesignerplugin.cpp:109
-#, fuzzy
 msgctxt "kgendesignerplugin about data|"
 msgid "Ian Reinhart Geiser"
-msgstr "Ian Reinhart Geiser"
+msgstr "איאן ריינהארט גייזר"
 
 #: kgendesignerplugin.cpp:110
-#, fuzzy
 msgctxt "kgendesignerplugin about data|"
 msgid "Daniel Molkentin"
-msgstr "Daniel Molkentin"
+msgstr "דניאל מולקנטין"
