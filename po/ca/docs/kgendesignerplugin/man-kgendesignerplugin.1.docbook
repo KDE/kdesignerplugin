@@ -271,7 +271,7 @@
 >ImplClass</literal
 >. Aquests han d'estar envoltats entre parèntesis (predeterminat: «<literal
 >(parent)</literal
->»). L'única variable garantida que estarà disponible és la <varname
+>»). L'única variable garantida que estarà disponible és <varname
 >parent</varname
 >, la qual és la pare de <code
 >QWidget</code
