@@ -64,5 +64,4 @@ install( FILES
 
 install(EXPORT KF5DesignerPluginTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5DesignerPluginTargets.cmake NAMESPACE KF5:: )
 
-include(ECMFeatureSummary)
-ecm_feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)
+feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)
