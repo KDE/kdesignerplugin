@@ -1,0 +1,534 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % Slovenian "INCLUDE">
+]>
+
+<refentry lang="&language;">
+
+<refentryinfo>
+  <title
+>&kde-frameworks;: KDesignerPlugin</title>
+  <author
+><firstname
+>Richard</firstname
+> <surname
+>Johnson</surname
+> <contrib
+>Napisal izvirno dokumentacijo.</contrib>
+    <affiliation>
+      <address
+><email
+>rjohnson@kde.org</email
+></address>
+    </affiliation>
+  </author>
+  <author
+><firstname
+>Alex</firstname
+> <surname
+>Merry</surname
+> <contrib
+>Posodobljena dokumentacija za &kf5-full;.</contrib>
+    <affiliation>
+      <address
+><email
+>alexmerry@kde.org</email
+></address>
+    </affiliation>
+  </author>
+  <date
+>28.05.2014</date>
+  <releaseinfo
+>Frameworks 5.0</releaseinfo>
+  <productname
+>KDE Frameworks</productname>
+</refentryinfo>
+
+<refmeta>
+  <refentrytitle
+><command
+>kgendesignerplugin</command
+></refentrytitle>
+  <manvolnum
+>1</manvolnum>
+</refmeta>
+
+
+
+<refnamediv>
+  <refname
+><command
+>kgendesignerplugin</command
+></refname>
+  <refpurpose
+>Ustvari vtičnike gradnikov za &Qt; Oblikovalec. </refpurpose>
+</refnamediv>
+
+
+
+<refsynopsisdiv>
+  <cmdsynopsis
+><command
+>kgendesignerplugin</command
+> <group choice="opt" rep="repeat"
+><replaceable class="option"
+>OPTIONS</replaceable
+></group
+> <arg choice="plain"
+><replaceable
+>file</replaceable
+></arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+
+
+<refsect1>
+  <title
+>Opis</title>
+  <para
+>Vtičniki pripomočkov po meri za &Qt; Designer običajno sledi standardnemu vzorcu, razredi, ki jih ponuja vtičnik, pa večinoma zagotavljajo statične informacije, skupaj s funkcijo za ustvarjanje primerka, ki je običajno le preprost klic konstruktorja. <command
+>kgendesignerplugin</command
+> omogoča razvijalcem knjižnic, ki ponujajo nove gradnike, da ustvarijo tak vtičnik, ne da bi ustvarili celotno povezano kodo, z zagotavljanjem preproste opisne datoteke v slogu ini. </para>
+
+  <para
+><command
+>kgendesignerplugin</command
+> izbere razumne privzete vrednosti za večino nastavitev, zato je običajno potrebna minimalna konfiguracija. </para>
+</refsect1>
+
+
+
+<refsect1>
+  <title
+>Možnosti</title>
+  <variablelist>
+    <varlistentry>
+      <term
+><option
+>-o <replaceable
+>file</replaceable
+></option
+></term>
+      <listitem>
+        <para
+>Ime za ustvarjeno datoteko C++. Če ni podan, bo uporabljen <varname
+>stdout</varname
+>. </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term
+><option
+>-n <replaceable
+>plugin-name</replaceable
+></option
+></term>
+      <listitem>
+        <para
+>Na voljo zaradi združljivosti. Privzeta vrednost za možnost PluginName v vhodni datoteki. </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term
+><option
+>-g <replaceable
+>group</replaceable
+></option
+></term>
+      <listitem>
+        <para
+>Na voljo zaradi združljivosti. Privzeta vrednost za možnost DefaultGroup v vhodni datoteki. </para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term
+><option
+>--author</option
+></term>
+      <listitem>
+        <para
+>Pokaži podatke o avtorju.</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term
+><option
+>--license</option
+></term>
+      <listitem>
+        <para
+>Pokaži informacije o licenci.</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term
+><option
+>-h, --help</option
+></term>
+      <listitem>
+        <para
+>Pokažite kratko besedilo pomoči.</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term
+><option
+>-v , --version</option
+></term>
+      <listitem>
+        <para
+>Prikaži informacije o različici.</para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+</refsect1>
+
+
+
+<refsect1>
+  <title
+>Format datoteke</title>
+  <para
+>Vhodna datoteka je konfiguracijska datoteka v slogu ini (natančneje, je v formatu, ki ga podpira ogrodje KConfig), ki opisuje niz gradnikov. Vsebuje razdelek <literal
+>[Global]</literal
+>, ki zagotavlja splošne informacije o vtičniku, in razdelek za vsak gradnik, ki mora biti vključen v vtičnik. </para>
+
+  <para
+>Razdelek <literal
+>[Global]</literal
+> ima lahko naslednje vnose: <variablelist>
+      <varlistentry>
+        <term
+><varname
+>DefaultGroup</varname
+></term>
+        <listitem>
+          <para
+>Privzeta vrednost za vnos <varname
+>Skupina</varname
+> v razdelkih razreda (privzeto: "<literal
+>Po meri</literal
+>", razen če je podana možnost <option
+>-g</option
+>). </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><varname
+>Vključuje</varname
+></term>
+        <listitem>
+          <para
+>(Z vejicami ločen) seznam zahtevanih vključkov (privzeto: prazno). Upoštevajte, da datoteke glave za gradnike, navedene pozneje v datoteki, ne bi smele biti navedene tukaj; namesto tega je to za posebne glave za lastno uporabo vtičnika, kot so tiste za razrede, ki nudijo predogled. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><varname
+>PluginName</varname
+></term>
+        <listitem>
+          <para
+>Ime glavnega razreda C++ v vtičniku (privzeto: "<literal
+>WidgetsPlugin</literal
+>", razen če je podana možnost <option
+>-n</option
+>). </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </para>
+
+  <para
+>Vsak razred mora imeti svoj razdelek <literal
+>[<replaceable
+>ClassName</replaceable
+>]</literal
+>, ki lahko vključuje naslednje vnose: <variablelist>
+      <varlistentry>
+        <term
+><varname
+>CodeTemplate</varname
+></term>
+        <listitem>
+          <para
+>Vrednost, ki jo vrne funkcija <code
+>codeTemplate()</code
+> vtičnika, ki jo &Qt; Oblikovalnik (privzeto: prazno). </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><varname
+>ConstructorArgs</varname
+></term>
+        <listitem>
+          <para
+>Argumenti za posredovanje konstruktorju razreda, ki ga poda <literal
+>ImplClass</literal
+>; ti morajo biti obdani z oklepaji (privzeto: "<literal
+>(parent)</literal
+>"). Edina spremenljivka, ki je zajamčeno na voljo, je <varname
+>parent</varname
+>, ki je nadrejeni <code
+>QWidget</code
+>, ki ga posreduje &Qt; Oblikovalec. </para>
+          <para
+>Ta vnos je prezrt, če je nastavljen <literal
+>CreateWidget</literal
+>. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><varname
+>CreateWidget</varname
+></term>
+        <listitem>
+          <para
+>Koda, potrebna za ustvarjanje primerka gradnika (privzeto: uporablja <code
+>new</code
+> za ustvarjanje primerka razreda, ki ga poda vnos <literal
+>ImplClass</literal
+>, pri čemer posreduje argumente, ki jih določa <literal
+> ConstructorArgs</literal
+>). Oglejte si opombe za <literal
+>ImplClass</literal
+> in <literal
+>ConstructorArgs</literal
+>. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><varname
+>DomXML</varname
+></term>
+        <listitem>
+          <para
+>&XML; Opis uporabniškega vmesnika gradnika (privzeto: privzeto, ki ga zagotavljajo glave vtičnika &Qt; Designer). </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><varname
+>Skupina</varname
+></term>
+        <listitem>
+          <para
+>Skupina za prikaz gradnika v &Qt; Designer (privzeto: vrednost vnosa <varname
+>DefaultGroup</varname
+> v razdelku <literal
+>[Global]</literal
+>). </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><varname
+>IconName</varname
+></term>
+        <listitem>
+          <para
+>Slikovna datoteka ali ime standardne ikone, ki bo uporabljena kot ikona za ta gradnik v &Qt; Seznam pripomočkov oblikovalca (privzeto: datoteka PNG, imenovana z imenom razdelka, z odstranjenimi dvojnimi dvopičji, v imeniku »pics« prevedene datoteke virov; na primer <filename
+>:/pics/Foo.png</filename
+> v razdelku <literal
+>[Foo]</literal
+> ali <filename
+>:/pics/FooBar.png</filename
+> v razdelku <literal
+>[Foo::Bar]</literal
+>). </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><varname
+>ImplClass</varname
+></term>
+        <listitem>
+          <para
+>Razred, ki ga je treba uporabiti za ustvarjanje primerka gradnika za uporabo &Qt; Oblikovalnik (privzeto: ime razdelka). Upoštevajte, da ni nujno, da je to pravzaprav razred, ki bi bil ustvarjen za končno aplikacijo: to določa <literal
+>DomXML</literal
+>. </para>
+          <para
+>Ta vnos je prezrt, če je nastavljen <literal
+>CreateWidget</literal
+>. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><varname
+>IncludeFile</varname
+></term>
+        <listitem>
+          <para
+>Glava, ki mora biti vključena za uporabo tega gradnika (privzeto: različica imena razdelka z malimi črkami, z odstranjenimi dvopičji in dodanim ".h" na primer <literal
+>foo.h</literal
+> v razdelku <literal
+>[Foo]</literal
+> ali <literal
+>foobar.h</literal
+> v razdelku <literal
+>[Foo::Bar]</literal
+>). </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><varname
+>IsContainer</varname
+></term>
+        <listitem>
+          <para
+>Ali lahko ta gradnik vsebuje druge gradnike (privzeto: <literal
+>false</literal
+>). </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><varname
+>Namig orodja</varname
+></term>
+        <listitem>
+          <para
+>Namig orodja, ki se prikaže, ko miškin kazalec premaknete nad gradnik na seznamu gradnikov &Qt; Oblikovalnik (privzeto: ime razdelka z dodanim »Widget«; na primer <literal
+>Foo Widget</literal
+> v razdelku <literal
+>[Foo]</literal
+>). </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><varname
+>Kaj je to</varname
+></term>
+        <listitem>
+          <para
+>Besedilo Kaj je to, povezano z gradnikom v &Qt; Oblikovalnik (privzeto: ime razdelka z dodanim » Widget«; na primer <literal
+>Foo Widget</literal
+> v razdelku <literal
+>[Foo]</literal
+>). </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </para>
+</refsect1>
+
+
+
+<refsect1>
+  <title
+>Primeri</title>
+  <para
+>The simplest description file might look like: <screen language="ini">
+<![CDATA[
+[Foo]
+ToolTip=Displays foos
+[Bar]
+ToolTip=Bar editor
+]]>
+    </screen
+> Note that each class must have at least one key set (<literal
+>ToolTip</literal
+> was used in this example), otherwise it will be ignored. </para>
+  <para
+>Običajno želite spremeniti vsaj uporabniku vidno besedilo, kar pomeni vnose <literal
+>ToolTip</literal
+>, <literal
+>WhatsThis</literal
+> in <literal
+>Group</literal
+>. Poleg tega je nastavitev imena vtičnika lahko dobra ideja, da preprečite morebitne spopade simbolov in ne zamenjate razhroščevalnikov (obeh tako aplikacij za odpravljanje napak kot oseb, ki odpravljajo napake): <screen language="ini"
+><![CDATA[
+[Global]
+PluginName=FooWidgets
+DefaultGroup=Display
+
+[Foo]
+ToolTip=Displays bears
+WhatsThis=An image widget that displays dancing bears
+
+[Bar]
+ToolTip=Bar editor
+WhatsThis=An editor interface for bars for bears
+Group=Editing
+]]>
+    </screen>
+  </para>
+  <para
+>Bolj zapletene datoteke bodo morda potrebne, če imate razrede z imenskim prostorom ali dodatne možnosti, ki jih je treba posredovati konstruktorjem, na primer: <screen language="ini"
+><![CDATA[
+[Global]
+PluginName=FooWidgets
+DefaultGroup=Foo
+
+[Foo::Bar]
+ToolTip=Displays bars
+WhatsThis=A widget that displays bars in a particular way
+IncludeFile=foo/bar.h
+IconName=:/previews/bar.png
+
+[Foo::Baz]
+IncludeFile=foo/baz.h
+ConstructorArgs=(Foo::Baz::SomeOption, parent)
+Group=Foo (Special)
+IsContainer=true
+IconName=:/previews/baz.png
+]]>
+    </screen>
+  </para>
+  <para
+>Včasih posebej zapleteni gradniki morda potrebujejo posebno implementacijo "preview class" za uporabo v &Qt; oblikovalec; to je lahko podrazred pravega pripomočka, ki samo naredi nekaj dodatnih nastavitev, ali pa je to lahko popolnoma drugačna izvedba. <screen language="ini"
+><![CDATA[
+[Global]
+Includes=foopreviews.h
+
+[FancyWidget]
+ImplClass=FancyWidgetPreview
+]]>
+    </screen>
+  </para>
+</refsect1>
+
+
+
+<refsect1>
+  <title
+>Poglejte tudi</title>
+  <variablelist>
+    <varlistentry>
+      <term>
+        <uri
+>https://doc.qt.io/qt-5/designer-creating-custom-widgets.html</uri>
+      </term>
+      <listitem>
+        <para
+>&Qt; Dokumentacija oblikovalca o ustvarjanju vtičnikov za pripomočke po meri.</para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+</refsect1>
+
+
+
+<refsect1>
+  <title
+>Napake</title>
+  <para
+>Za poročanje o napakah uporabite <ulink url="https://bugs.kde.org"
+>&kde; sledilnik napak</ulink
+>, ne pošiljajte pošte neposredno avtorjem. </para>
+</refsect1>
+
+</refentry>
+<!--
+vim:sts=2:sw=2:et
+-->
